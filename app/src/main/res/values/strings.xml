@@ -1,0 +1,209 @@
+<resources>
+    <string name="app_name">React InterView App</string>
+
+    <string name="react">React</string>
+    <string name="learning">Learning</string>
+    <string name="hub">Hub</string>
+    <string name="todo">TODO</string>
+    <string name="_1">1.</string>
+    <string name="React_Introducation">Introducation</string>
+    <string name="_2">2.</string>
+    <string name="react_fundamentals">React Fundamentals</string>
+    <string name="_3">3.</string>
+    <string name="advanced_concepts">Advanced Concepts</string>
+    <string name="_4">4.</string>
+    <string name="react_hooks">React Hooks</string>
+    <string name="_5">5.</string>
+    <string name="routing_with_react_router">Routing with React Router</string>
+    <string name="_6">6.</string>
+    <string name="styling_in_react">Styling in React</string>
+    <string name="_7">7.</string>
+    <string name="state_management">State Management</string>
+
+    <!--  Introducation  -->
+    <string name="_1_what_is_react">1. What is React?</string>
+    <string name="react_is_a_javascript_library_for_building_fast_interactive_and_scalable_user_interfaces_it_is_primarily_used_for_developing_single_page_applications_spas_and_emphasizes_the_component_based_architecture">React is a JavaScript library for building fast, interactive, and scalable user interfaces. It is primarily used for developing single-page applications (SPAs) and emphasizes the component-based architecture.</string>
+
+    <!-- React Router Interview Questions and Answers -->
+
+    <!-- Title -->
+    <string name="React_Router_Introduction">React Router</string>
+
+    <!-- Question 1 -->
+    <string name="what_is_react_router">1. What is React Router, and why is it used in React applications?</string>
+    <string name="react_router_answer">React Router is a library for handling routing in React applications. It lets you navigate between different components without refreshing the page, enabling single-page applications (SPAs).</string>
+
+    <!-- Question 2 -->
+    <string name="difference_between_browser_router_and_hash_router">2. What is the difference between BrowserRouter and HashRouter in React Router?</string>
+    <string name="browser_router_answer">BrowserRouter uses the HTML5 history API to manage the URL, while HashRouter uses the URL hash (#) for compatibility with older browsers.</string>
+
+    <!-- Question 3 -->
+    <string name="what_are_components_of_react_router">3. What are the components of React Router?</string>
+    <string name="components_answer">Key components include BrowserRouter, Route, Link, Switch, and Redirect.</string>
+
+    <!-- Question 4 -->
+    <string name="what_is_link_component_in_react_router">4. What is the purpose of the `Link` component in React Router?</string>
+    <string name="link_component_answer">The `Link` component is used for navigation between different routes in React, replacing traditional anchor tags to avoid page reloads.</string>
+
+    <!-- Question 5 -->
+    <string name="difference_between_exact_and_default_props_in_react_router">5. What is the difference between `exact` and `default` props in React Router?</string>
+    <string name="exact_default_props_answer">The `exact` prop ensures the route only matches when the URL is an exact match, while `default` is used for a default route when no other routes match.</string>
+
+    <!-- Question 6 -->
+    <string name="how_to_pass_props_to_route_component_in_react_router">6. How would you pass props to a component rendered by a `Route` in React Router?</string>
+    <string name="pass_props_answer">You can pass props using the `render` or `children` props inside the `Route` component.</string>
+
+    <!-- Question 7 -->
+    <string name="what_are_usehistory_and_uselocation_hooks">7. What are `useHistory` and `useLocation` hooks in React Router?</string>
+    <string name="usehistory_uselocation_answer">`useHistory` allows programmatic navigation between routes, and `useLocation` returns the current location object with URL information.</string>
+
+    <!-- Question 8 -->
+    <string name="what_is_lazy_loading_in_react_router">8. What is lazy loading in React Router, and how can it be implemented?</string>
+    <string name="lazy_loading_answer">Lazy loading involves loading components only when needed. In React Router, this can be implemented using `React.lazy()` and `Suspense`.</string>
+
+    <!-- Question 9 -->
+    <string name="what_are_nested_routes_in_react_router">9. What are nested routes in React Router?</string>
+    <string name="nested_routes_answer">Nested routes allow you to define routes inside other routes to create dynamic layouts and hierarchical routing.</string>
+
+    <!-- Question 10 -->
+    <string name="what_is_useparams_hook">10. What is the `useParams` hook in React Router?</string>
+    <string name="useparams_answer">The `useParams` hook allows you to access route parameters in the URL (dynamic segments) within a component.</string>
+
+    <!-- Question 11 -->
+    <string name="how_to_handle_protected_routes_in_react_router">11. How would you handle protected routes in React Router?</string>
+    <string name="protected_routes_answer">Protected routes can be managed by checking the user\'s authentication status before rendering the route. If not authenticated, redirect to login.</string>
+
+    <!-- Question 12 -->
+    <string name="how_to_implement_404_page_in_react_router">12. How to implement a 404 page in React Router?</string>
+    <string name="implement_404_answer">A 404 page can be implemented by using a catch-all route that renders a NotFound component when no other route matches.</string>
+
+    <!-- Question 13 -->
+    <string name="how_to_handle_route_transitions_in_react_router">13. How do you handle route transitions in React Router?</string>
+    <string name="route_transitions_answer">You can animate route transitions using `react-transition-group` and `CSSTransition` components.</string>
+
+    <!-- Question 14 -->
+    <string name="difference_between_usehistory_push_and_history_push">14. What is the difference between `useHistory.push()` and `history.push()` in React Router?</string>
+    <string name="usehistory_history_answer">`useHistory.push()` is for functional components using hooks, while `history.push()` is for class-based components to navigate programmatically.</string>
+
+    <!-- Question 15 -->
+    <string name="how_to_handle_redirects_in_react_router">15. How do you handle redirects in React Router?</string>
+    <string name="redirects_answer">Redirects can be handled using the `Redirect` component or programmatically with `history.push()`.</string>
+
+    <string name="fetch_api_question">What is the `fetch` API in React?</string>
+    <string name="fetch_api_answer">The `fetch` API is a native JavaScript function that allows making HTTP requests to fetch resources from a server. It returns a promise, which can be resolved to handle the response data.</string>
+
+    <string name="get_request_question">How do you make a GET request using `fetch` in React?</string>
+    <string name="get_request_answer">A GET request is made using the `fetch` function by specifying the URL and configuring the method.</string>
+
+    <string name="use_effect_question">What is `useEffect` and how is it used to fetch data from an API?</string>
+    <string name="use_effect_answer">`useEffect` is a hook that runs side effects in function components. It can be used to fetch data when the component mounts or when dependencies change.</string>
+
+    <!-- Medium Level Questions and Answers -->
+
+    <string name="authentication_api_question">How do you handle authentication with APIs in React?</string>
+    <string name="authentication_api_answer">Authentication with APIs can be handled using tokens (e.g., JWT). After a user logs in, you typically store the token in local storage or cookies and include it in the headers of API requests using the `Authorization` header.</string>
+
+    <string name="axios_post_question">What is Axios and why would you use it instead of `fetch`?</string>
+    <string name="axios_post_answer">Axios is a promise-based HTTP client for JavaScript that provides a simple API for making requests. It has features like automatic JSON parsing, request cancellation, and better error handling compared to the native `fetch` API.</string>
+
+    <string name="cors_issue_question">How do you handle CORS (Cross-Origin Resource Sharing) issues in React when calling an API?</string>
+    <string name="cors_issue_answer">CORS issues are typically server-side problems. However, in development, you can use a proxy server or tools like `http-proxy-middleware` in `create-react-app` to avoid CORS issues by routing API calls through the development server.</string>
+
+    <!-- Hard Level Questions and Answers -->
+
+    <string name="pagination_api_question">How do you handle pagination in React when fetching data from an API?</string>
+    <string name="pagination_api_answer">Pagination can be handled by maintaining a page number state and making an API request with the page number as a parameter. When the page number changes, a new API request is triggered to fetch the corresponding data.</string>
+
+    <string name="optimization_large_data_question">How would you optimize API requests in React when dealing with large datasets?</string>
+    <string name="optimization_large_data_answer">Optimizing API requests for large datasets can involve techniques such as pagination, lazy loading, caching data locally using `localStorage` or `sessionStorage`, and making requests only when necessary to avoid over-fetching.</string>
+
+    <string name="usereducer_api_question">What are hooks like `useReducer` and how do they help in managing API state in complex components?</string>
+    <string name="usereducer_api_answer">`useReducer` is a hook used to manage more complex state logic. It works similarly to `useState` but allows for more control over state transitions. It is useful for handling API state with multiple actions, such as loading, success, and error.</string>
+
+    <string name="rate_limiting_question">What are some strategies to handle rate limiting when making API calls in React?</string>
+    <string name="rate_limiting_answer">Strategies for handling rate limiting include using exponential backoff (delaying subsequent requests after a failure), implementing caching, batching requests, or implementing request throttling.</string>
+
+    <string name="global_api_error_question">How would you handle API errors globally in React, using something like an error boundary?</string>
+    <string name="global_api_error_answer">You can handle API errors globally using an `ErrorBoundary` component to catch errors in the rendering process. For network-related errors, you can wrap your API calls with a try-catch block and display an error message in the UI.</string>
+
+    <!-- Performance Bottlenecks -->
+    <string name="performance_bottlenecks_question">What are the common performance bottlenecks in React applications?</string>
+    <string name="performance_bottlenecks_answer">Re-renders, large JavaScript bundles, excessive DOM manipulations, and memory leaks are common performance bottlenecks.</string>
+
+    <!-- Memoization -->
+    <string name="memoization_concept_question">Explain the concept of memoization in React.</string>
+    <string name="memoization_concept_answer">Memoization is a technique used to cache the results of expensive function calls. In React, React.memo() prevents re-renders when props haven’t changed.</string>
+
+    <!-- useMemo and useCallback -->
+    <string name="useMemo_and_useCallback_question">How does useMemo() and useCallback() help with performance optimization?</string>
+    <string name="useMemo_and_useCallback_answer">useMemo() caches a computation’s result, and useCallback() caches a function, preventing unnecessary re-renders.</string>
+
+    <!-- Lazy Loading -->
+    <string name="lazy_loading_question">What is lazy loading in React and how does it improve performance?</string>
+    <string name="lazy_loading_answer1">Lazy loading allows loading components only when needed, reducing initial load time. React.lazy() facilitates this process.</string>
+
+    <!-- Large Lists Optimization -->
+    <string name="optimize_large_lists_question">How can you optimize the rendering of large lists in React?</string>
+    <string name="optimize_large_lists_answer">Use requestAnimationFrame(), virtualization libraries, and ensure unique keys for list items to optimize performance.</string>
+
+    <!-- Code Splitting -->
+    <string name="code_splitting_question">Explain the role of code splitting in React performance optimization.</string>
+    <string name="code_splitting_answer">Code splitting divides the application into smaller chunks, reducing the initial load time by loading only the necessary code.</string>
+
+    <!-- Image Optimization -->
+    <string name="image_optimization_question">How can you optimize images in a React application?</string>
+    <string name="image_optimization_answer">Use image compression, proper formats, lazy loading, and image libraries for optimization.</string>
+
+    <!-- Profiling -->
+    <string name="profiling_significance_question">What is the significance of profiling React applications?</string>
+    <string name="profiling_significance_answer">Profiling helps identify performance bottlenecks, such as components re-rendering unnecessarily, and provides insight into optimization areas.</string>
+
+    <!-- Event Handlers Optimization -->
+    <string name="event_handlers_optimization_question">How can you improve the performance of event handlers in React?</string>
+    <string name="event_handlers_optimization_answer">Debouncing, throttling, and event delegation can help optimize event handler performance.</string>
+
+    <!-- State Management -->
+    <string name="state_management_library_question">How does using a state management library (like Redux or Zustand) impact performance?</string>
+    <string name="state_management_library_answer">State management libraries provide centralized state and predictable data flow, but may introduce overhead if not used carefully.</string>
+
+    <!-- Performance Pitfalls -->
+    <string name="performance_pitfalls_question">What are some common performance pitfalls to avoid in React?</string>
+    <string name="performance_pitfalls_answer">Avoid inefficient state updates, deep component nesting, and excessive use of Context API to prevent performance issues.</string>
+
+    <!-- Virtual DOM -->
+    <string name="virtual_dom_question">Explain the concept of React\'s virtual DOM and how it contributes to performance.</string>
+    <string name="virtual_dom_answer">The virtual DOM minimizes direct manipulation of the real DOM, improving performance by calculating minimal changes before updating the actual DOM.</string>
+
+    <!-- Custom Hooks Memoization -->
+    <string name="custom_hooks_memoization_question">How can you leverage memoization with custom hooks?</string>
+    <string name="custom_hooks_memoization_answer">You can use useMemo() within custom hooks to cache expensive computations and optimize component performance.</string>
+
+    <!-- Form Optimization -->
+    <string name="optimize_forms_question">How can you optimize the performance of forms in React?</string>
+    <string name="optimize_forms_answer">Use controlled components, consider form libraries like Formik, and implement lazy loading for forms to optimize performance.</string>
+
+    <!-- Third-Party Libraries -->
+    <string name="third_party_libraries_question">What is the impact of using third-party libraries on React application performance?</string>
+    <string name="third_party_libraries_answer">Third-party libraries can impact bundle size and initial load time, so choose libraries carefully and use tree-shaking or code splitting to mitigate the effect.</string>
+
+    <!-- Profiling Tools -->
+    <string name="profiling_tools_question">How can you use profiling tools to identify performance bottlenecks in your React components?</string>
+    <string name="profiling_tools_answer">React Profiler and browser developer tools can help analyze rendering times, memory usage, and network requests to identify performance bottlenecks.</string>
+
+    <!-- SSR Optimization -->
+    <string name="ssr_optimization_question">How can you optimize the performance of server-side rendering (SSR) in React?</string>
+    <string name="ssr_optimization_answer">Reduce the data fetched on the server, implement code splitting, and use caching to optimize SSR performance.</string>
+
+    <!-- Hydration -->
+    <string name="hydration_question">Explain the concept of hydration in React and how it impacts performance.</string>
+    <string name="hydration_answer">Hydration is the process of initializing the client-side application after the server-rendered HTML is loaded. Efficient hydration prevents delay in interactivity.</string>
+
+    <!-- Mobile Performance -->
+    <string name="mobile_performance_question">How can you improve the performance of React applications on mobile devices?</string>
+    <string name="mobile_performance_answer">Optimize for mobile using responsive design, minimize heavy JavaScript, and use image optimization techniques specific to mobile devices.</string>
+
+    <!-- Advanced Optimization -->
+    <string name="advanced_optimization_question">What are some advanced performance optimization techniques in React?</string>
+    <string name="advanced_optimization_answer">Techniques include offscreen rendering, Concurrent Mode, and Suspense for better prioritization and responsiveness in rendering.</string>
+
+</resources>

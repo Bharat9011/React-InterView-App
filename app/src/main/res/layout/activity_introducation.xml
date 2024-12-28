@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A00DCFF"
+    android:scrollbarSize="0dp"
+    tools:context=".IntroducationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/React_Introducation" />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_what_is_react" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/react_is_a_javascript_library_for_building_fast_interactive_and_scalable_user_interfaces_it_is_primarily_used_for_developing_single_page_applications_spas_and_emphasizes_the_component_based_architecture" />
+
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Who created React, and when?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React was developed by Jordan Walke at Facebook and was open-sourced in 2013. Facebook initially used it for their News Feed feature, and it has since become widely adopted." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. What are the main features of React?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; JSX: Write HTML-like syntax directly in JavaScript." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Components: Build encapsulated, reusable UI blocks." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Virtual DOM: Efficiently update and render the UI." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Unidirectional Data Flow: Ensures predictable state management." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Hooks: Enable state and lifecycle features in functional components." />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. What is the difference between React and other frameworks like Angular or Vue?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; React: A library focusing only on UI. It requires external tools like Redux or Context API for state management." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Angular: A full-fledged framework with built-in routing, state management, and dependency injection." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Vue: A framework that’s lightweight but includes routing and state management. React is often more flexible but requires additional setup." />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. What is JSX?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JSX (JavaScript XML) is a syntax extension that combines HTML-like code with JavaScript logic. It helps developers build UIs more intuitively by writing what the interface should look like\nFor Example :-> " />
+
+        <include
+            layout="@layout/show_functional_component"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JSX is transpiled into JavaScript via tools like Babel." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. What is the Virtual DOM in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The virtual DOM is a lightweight copy of the real DOM. It calculates changes and updates only the required parts of the real DOM, improving performance and reducing re-rendering overhead." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. What are components in React?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Components are the building blocks of a React application. They can be of two types:" />
+
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Functional Components: Simple functions that accept props and return JSX." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Class Components: More complex and include lifecycle methods and state. Components can be nested, reused, and composed to build a full app." />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8. What is the difference between functional and class components?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Functional Components: Simple, stateless components defined as JavaScript functions." />
+
+            <include
+                layout="@layout/show_functional_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Class Components: Include states and lifecycle methods but are becoming less common with the advent of hooks." />
+
+            <include
+                layout="@layout/show_class_component_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9. What is the purpose of state in React?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; State allows components to manage dynamic, mutable data internally." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; It can only be updated using the setState method (for class components) or useState hook (for functional components)." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Example" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/show_state_example_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10. What are props in React?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Props are read-only inputs passed to components from parent components." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; They allow data to flow down the component tree and are immutable." />
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. What is the difference between props and state?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Props: Passed by a parent component, immutable, used for static data." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; State: Managed within the component, mutable, used for dynamic data." />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. What is a single-page application (SPA)?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="An SPA loads a single HTML page and updates content dynamically using JavaScript and React without refreshing the page. Examples include Gmail and Facebook." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. What are lifecycle methods in React?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lifecycle methods manage a component's life phases (mounting, updating, unmounting). Key methods include:" />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; componentDidMount: Called after the component is rendered." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; componentDidUpdate: Called after a component is updated." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; componentWillUnmount: Called before a component is removed." />
+        </LinearLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14. What is React’s unidirectional data flow?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React follows one-way data binding, meaning data flows from parent to child components via props, ensuring better control and debugging." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15. What is the purpose of the key attribute in lists?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The key helps React identify and efficiently update items in a list during rendering. Without unique keys, React may re-render the entire list unnecessarily." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16. What is React’s reconciliation process?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reconciliation ensures optimal updates by comparing the virtual DOM with the real DOM and only updating the changed parts." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17. What is the use of React Developer Tools?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="It is a browser extension for inspecting React components, checking state, and debugging props." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18. How do you handle events in React?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; React events are similar to DOM events but follow camelCase naming." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Event handlers are functions passed as props." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Example" />
+
+            <include
+                layout="@layout/show_button_javascript_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="19. What is the purpose of the create-react-app tool?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="It sets up a fully configured React project with no manual setup. It includes Webpack, Babel, and development tools pre-installed." />
+
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20. What is React’s main advantage over traditional JavaScript?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="React provides:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Faster UI updates with the virtual DOM." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="&#8226; A modular structure using components." />
+
+            <TextView
+                style="@style/AnswerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="&#8226; Reusable code and better state management." />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

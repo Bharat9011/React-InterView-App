@@ -1,0 +1,214 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:scrollbarSize="0dp"
+    tools:context=".StateManagementActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State Management" />
+
+        <!-- Easy Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What is state in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State in React refers to an object that holds dynamic data for a component. It allows React components to create and manage their own data and trigger re-renders when the data changes." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. What is the difference between props and state in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Props are immutable and passed from parent to child components. State is mutable and managed within the component itself, allowing for data changes that affect the component's behavior or rendering." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. How do you update the state in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State in React is updated using the `setState` function. It is an asynchronous operation that schedules a re-render of the component with the new state." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Can you update state directly in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" No, you should never directly modify the state in React. Instead, use the setState method to update the state, as this ensures that React knows about the change and triggers a re-render." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. What is the role of useState in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useState is a React Hook that allows functional components to manage local state. It returns an array with the current state value and a function to update it." />
+
+        <!-- Medium Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. What is the difference between `useState` and `useReducer` in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="`useState` is useful for simple state management, while `useReducer` is preferred when the state logic is complex or involves multiple sub-values. `useReducer` is similar to using Redux but within a component." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. What is Redux in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redux is a state management library for JavaScript applications, including React. It allows you to store the entire application state in a single store and manage it through actions and reducers." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. What are actions and reducers in Redux?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Redux, actions are plain JavaScript objects that describe what happened, while reducers are pure functions that specify how the state should change in response to an action." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. What is the role of mapStateToProps and mapDispatchToProps in Redux?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mapStateToProps connects the Redux state to the component props, while mapDispatchToProps maps Redux action creators to the component's props, allowing components to dispatch actions." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. What is the context API in React and how does it work for state management?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Context API provides a way to pass data through the component tree without having to manually pass props. It is often used for global state management, like themes or user authentication." />
+
+        <!-- Hard Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. What are middleware in Redux, and can you give an example?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Middleware in Redux are functions that intercept actions before they reach the reducer. Examples include `redux-thunk` for handling asynchronous actions and `redux-saga` for more complex side effects management." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. How does `useContext` work with the Context API in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="`useContext` is a React Hook that allows you to consume the value of a Context object within a functional component. It provides access to the nearest context provider's value." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. How do you handle side effects in React when using the Context API or Redux?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side effects can be handled in Redux using middleware like `redux-thunk` or `redux-saga`, while in Context API, side effects are usually handled inside components using `useEffect`." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. What is the concept of \'lifting state up\' in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifting state up refers to moving state from a child component to its closest common ancestor to share the state between sibling components. This is necessary when multiple components need access to the same state." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14. How do you optimize performance in React when managing state?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You can optimize performance by using techniques like memoization (useMemo, React.memo), batching state updates, using lazy loading for components, and reducing unnecessary re-renders by carefully managing state dependencies." />
+
+    </LinearLayout>
+
+</ScrollView>

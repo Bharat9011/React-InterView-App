@@ -1,0 +1,226 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A00DCFF"
+    android:scrollbarSize="0dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="React Styling" />
+
+        <!-- Easy Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What is Inline Styling in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inline styling in React involves applying CSS styles directly to a component using a JavaScript object." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. How to use CSS Stylesheets in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSS files can be imported directly into React components to apply global or component-level styles." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. What are CSS Modules in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSS Modules allow scoped CSS styles, which are unique to a specific component, preventing conflicts." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. What are Styled Components in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Styled Components enable writing CSS inside JavaScript with template literals, providing scoped and reusable styles." />
+
+        <!-- Medium Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. What is React-Bootstrap?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React-Bootstrap is a library of pre-built Bootstrap components converted into React components, providing a responsive UI." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. How to use Material-UI in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Material-UI is a React framework that implements Material Design. You can use its pre-built components like Button, Grid, etc." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. How to use Sass in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sass can be used in React by installing `node-sass` and importing `.scss` files directly into components." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. What is Emotion in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emotion is a library for writing CSS-in-JS with powerful features like dynamic styling, theming, and SSR support." />
+
+        <!-- Hard Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. How to use theming with Styled Components?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theming in Styled Components can be done using the `ThemeProvider` to apply a global theme across components." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. How to handle Server-Side Rendering (SSR) with Styled Components?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For SSR, you need to extract styles on the server using `ServerStyleSheet` to avoid flash of unstyled content." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. What is Critical CSS and Code Splitting?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Critical CSS loads only the essential styles for the initial page load, and code splitting breaks down large files into smaller chunks." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. How to manage dynamic styles using Custom Hooks in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom hooks in React can be used for dynamic styling based on component state or props." />
+
+        <!-- Advanced Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. How to use CSS Grid and Flexbox in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSS Grid and Flexbox allow building responsive and flexible layouts. React can use these for advanced layout management." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14. How to manage global state with CSS-in-JS in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSS-in-JS libraries like Styled Components can use global state for dynamic styling based on application-wide state." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15. How to implement responsive design in React using Media Queries?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media queries can be used in React with CSS-in-JS or traditional CSS to adapt styles based on screen size and device features." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16. How to use CSS Variables with React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSS Variables allow dynamic changes to CSS properties. React can modify them to adjust themes and styling dynamically." />
+    </LinearLayout>
+</ScrollView>

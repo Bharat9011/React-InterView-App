@@ -1,0 +1,221 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A00DCFF"
+    android:scrollbarSize="0dp"
+    tools:context=".RoutingWithReactRouterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <!-- Question 1 -->
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/React_Router_Introduction" />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_is_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/react_router_answer" />
+
+        <!-- Question 2 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difference_between_browser_router_and_hash_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/browser_router_answer" />
+
+        <!-- Question 3 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_are_components_of_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/components_answer" />
+
+        <!-- Question 4 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_is_link_component_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/link_component_answer" />
+
+        <!-- Question 5 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difference_between_exact_and_default_props_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exact_default_props_answer" />
+
+        <!-- Question 6 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_to_pass_props_to_route_component_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pass_props_answer" />
+
+        <!-- Question 7 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_are_usehistory_and_uselocation_hooks" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usehistory_uselocation_answer" />
+
+        <!-- Question 8 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_is_lazy_loading_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lazy_loading_answer" />
+
+        <!-- Question 9 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_are_nested_routes_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/useparams_answer" />
+
+        <!-- Question 10 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_is_useparams_hook" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/protected_routes_answer" />
+
+        <!-- Question 11 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_to_handle_protected_routes_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/route_transitions_answer" />
+
+        <!-- Question 12 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_to_implement_404_page_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/implement_404_answer" />
+
+        <!-- Question 13 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_to_handle_route_transitions_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/route_transitions_answer" />
+
+        <!-- Question 14 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/difference_between_usehistory_push_and_history_push" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usehistory_history_answer" />
+
+        <!-- Question 15 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_to_handle_redirects_in_react_router" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/redirects_answer" />
+
+    </LinearLayout>
+</ScrollView>

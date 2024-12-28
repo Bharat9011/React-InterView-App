@@ -1,0 +1,288 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:scrollbarSize="0dp"
+    tools:context=".PerformanceOptimizationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Performance Optimization" />
+
+        <!-- Question 1 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/performance_bottlenecks_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/performance_bottlenecks_answer" />
+
+        <!-- Question 2 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memoization_concept_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/memoization_concept_answer" />
+
+        <!-- Question 3 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/useMemo_and_useCallback_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/useMemo_and_useCallback_answer" />
+
+        <!-- Question 4 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lazy_loading_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lazy_loading_answer1" />
+
+        <!-- Question 5 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optimize_large_lists_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optimize_large_lists_answer" />
+
+        <!-- Question 6 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code_splitting_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/code_splitting_answer" />
+
+        <!-- Question 7 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_optimization_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image_optimization_answer" />
+
+        <!-- Question 8 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profiling_significance_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profiling_significance_answer" />
+
+        <!-- Question 9 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_handlers_optimization_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/event_handlers_optimization_answer" />
+
+        <!-- Question 10 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state_management_library_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/state_management_library_answer" />
+
+        <!-- Question 11 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/performance_pitfalls_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/performance_pitfalls_answer" />
+
+        <!-- Question 12 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/virtual_dom_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/virtual_dom_answer" />
+
+        <!-- Question 13 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_hooks_memoization_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_hooks_memoization_answer" />
+
+        <!-- Question 14 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optimize_forms_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optimize_forms_answer" />
+
+        <!-- Question 15 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third_party_libraries_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third_party_libraries_answer" />
+
+        <!-- Question 16 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profiling_tools_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profiling_tools_answer" />
+
+        <!-- Question 17 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ssr_optimization_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ssr_optimization_answer" />
+
+        <!-- Question 18 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hydration_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hydration_answer" />
+
+        <!-- Question 19 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_performance_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_performance_answer" />
+
+        <!-- Question 20 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/advanced_optimization_question" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/advanced_optimization_answer" />
+
+    </LinearLayout>
+
+</ScrollView>

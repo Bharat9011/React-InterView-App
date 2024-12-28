@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Heading">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">.1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="QuestionStyle">
+        <item name="android:layout_marginTop">15sp</item>
+        <item name="android:layout_marginStart">20sp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">.1</item>
+    </style>
+
+    <style name="AnswerStyle">
+        <item name="android:layout_marginStart">40sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">.1</item>
+        <item name="lineHeight">25dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AnswerStyleWithMoreHeight">
+        <item name="android:layout_marginStart">40sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">.1</item>
+        <item name="lineHeight">30dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

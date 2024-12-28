@@ -1,0 +1,201 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:scrollbarSize="0dp"
+    tools:context=".HandlingFormsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Handling Forms" />
+
+        <!-- Easy Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What is a controlled component in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A controlled component in React refers to an input element whose value is controlled by the state of the React component. The state updates with user input, and the component re-renders whenever the state changes." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. What is an uncontrolled component in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="An uncontrolled component in React refers to an input element whose value is not directly controlled by the React state. Instead, it relies on the DOM to manage its state, typically accessed using React refs." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. How do you handle form submission in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form submission in React is handled by using an event handler, typically with the `onSubmit` event. The form data is accessed from the component's state and processed as required when the form is submitted." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. What is the purpose of useState in handling forms in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useState is used in handling forms in React to manage the values of input fields. As the user interacts with the form, useState keeps track of the input values, and the component re-renders with the updated values." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. How do you bind an event handler to a form element in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You bind an event handler to a form element in React by passing the function to the element\'s event, such as onChange, onSubmit, etc. For example: &lt;input type=\'text\' value={this.state.name} onChange={this.handleChange} /&gt;." />
+
+        <!-- Medium Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. What is the difference between controlled and uncontrolled components in React forms?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Controlled components in React manage the input field value using React state. The value of the input is bound to a state variable and can be updated via `setState`. Uncontrolled components, on the other hand, do not directly bind to React state and instead use refs to access and manipulate the DOM." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. What are `useRef` and `useState` used for in React forms?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="`useState` is used to manage form input values in controlled components, while `useRef` is used in uncontrolled components to access and manipulate DOM elements directly without re-rendering the component." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. What is the purpose of onChange in React forms?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The onChange event handler in React is used to track changes in input fields. It updates the state with the new value whenever the user types into the input field, ensuring that the component re-renders with the latest input value." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. How do you handle multiple input fields in React forms?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To handle multiple input fields in React, you can use a single state object to store the values of all input fields, and each field can update its corresponding value using a common onChange handler." />
+
+        <!-- Hard Level Questions and Answers -->
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. How do you handle form submission with asynchronous code in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To handle form submission asynchronously, you can use `async/await` inside the form's submit handler function. This allows you to perform tasks like API calls before the form is fully submitted." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. What is the role of `useEffect` in handling form submissions?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="`useEffect` can be used to trigger side effects when the form data changes or when the form is submitted. For example, you can use `useEffect` to make an API call after the form is submitted or to reset the form once the data is processed." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. How can you optimize re-rendering when handling large forms in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To optimize re-rendering in large forms, you can use techniques like memoization (useMemo), React's shouldComponentUpdate lifecycle method (class components), or splitting the form into smaller, reusable components to prevent unnecessary re-renders." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14. How do you manage dynamic form fields in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dynamic form fields can be managed in React by using an array or object in the state to store the fields. You can then map over the array or object to render form fields dynamically, and handle their values and submissions accordingly." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15. What are higher-order components (HOCs) in React and how can they be used for handling forms?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Higher-order components (HOCs) are functions that take a component and return a new component with additional props. In the context of forms, HOCs can be used to add form functionality, like handling form validation or submission, to a form component." />
+
+    </LinearLayout>
+</ScrollView>

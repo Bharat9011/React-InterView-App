@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_of_show_include">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="class ErrorBoundary extends React.Component {\n\t\t\tconstructor(props) {\n\t\t\t\t\tsuper(props);\n\t\t\t\t\tthis.state = { hasError: false };\n\t\t\t}\n\t\t\tstatic getDerivedStateFromError() {\n\t\t\t\t\treturn { hasError: true };\n\t\t\t}\n\t\t\tcomponentDidCatch(error, info) {\n\t\t\t\t\t\tconsole.error('Error:', error, info);\n\t\t\t}\n\t\trender() {\n\t\t\t\tif (this.state.hasError) {\n\t\t\t\t\t\t\t\treturn &lt;h1&gt;Something went wrong.&lt;/h1&gt;;\n\t\t\t\t}\n\t\t\t\t\treturn this.props.children;\n\t\t\t}\n}"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

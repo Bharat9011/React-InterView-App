@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarSize="0dp"
+    tools:context=".AdvancedTopicsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Advanced Concepts" />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What is Higher-Order Component (HOC) in React?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A Higher-Order Component (HOC) is a function that takes a component as input and returns a new enhanced component. It is used to share common functionality between components without duplicating code." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. What is the Context API, and how is it different from Redux?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Context API provides a way to pass data through the component tree without having to pass props manually at every level. Redux, on the other hand, is a state management library that is more suitable for managing global states in larger applications." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Example:-" />
+
+        <include
+            layout="@layout/show_example_context_api"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Explain the concept of lazy loading in React." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lazy loading in React allows you to load components only when they are required, reducing the initial load time of the application. This is achieved using React.lazy and Suspense." />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. What are render props, and how are they used?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Render props is a technique where a component receives a function as a prop, allowing you to customize what is rendered." />
+
+        <include
+            layout="@layout/show_prop_example"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. What is the difference between server-side rendering (SSR) and client-side rendering (CSR)?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#8226; SSR: Content is rendered on the server before being sent to the client. Improves SEO and faster initial page load." />
+
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#8226; CSR: Content is rendered in the browser after JavaScript is executed. Ideal for dynamic, interactive applications." />
+
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. What is React Server Components (RSC)?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React Server Components allow components to render on the server, reducing the amount of JavaScript sent to the client. They enable server-side logic integration while maintaining a React-like development experience." />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_rsc_example"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. What is the difference between useCallback and useMemo?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#8226; useCallback is used to memoize callback functions to prevent unnecessary re-creation." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#8226; useMemo is used to memoize the result of a computation." />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_usecallback_usememo_example"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.  How does React handle error boundaries?"
+            style="@style/QuestionStyle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error boundaries are React components that catch JavaScript errors in their child component tree. They are created using componentDidCatch and getDerivedStateFromError."
+            style="@style/AnswerStyle"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_example_react_handle_error"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. What are custom hooks, and why are they used?"
+            style="@style/QuestionStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom hooks are reusable functions in React that encapsulate logic and can be shared across components. They start with the prefix use."
+            style="@style/AnswerStyle"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_example_custome_hooks"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. What is code splitting in React?"
+            style="@style/QuestionStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Code splitting is a technique to split a large codebase into smaller bundles that can be loaded on demand. This reduces initial loading time."
+            style="@style/AnswerStyle"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_example_code_splitting"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. What is the significance of key in React lists?"
+            style="@style/QuestionStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="key is a special attribute that helps React identify which items have changed, added, or removed. It improves rendering performance and ensures correct element association."
+            style="@style/AnswerStyle"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/show_example_key"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. Explain Suspense and Concurrent Mode in React?"
+            style="@style/QuestionStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#8226; Suspense: Used for handling asynchronous loading of components."
+            style="@style/AnswerStyle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#8226; Concurrent Mode: Enables React to interrupt rendering to handle higher-priority updates like user interactions."
+            style="@style/AnswerStyle"
+            />
+
+
+
+    </LinearLayout>
+</ScrollView>

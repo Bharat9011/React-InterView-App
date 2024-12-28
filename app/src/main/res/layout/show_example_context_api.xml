@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_of_show_include"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:scrollbarSize="0dp"
+    android:scrollbars="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="const"
+                    android:textColor="#b386bb"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" ThemeContext"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" ="
+                    android:textColor="#9b9b9b"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" React"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="createContext"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="()"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=";"
+                    android:textColor="#9b9b9b"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="funcation"
+                    android:textColor="#b386bb"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" App"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="()"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" {"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" return"
+                    android:textColor="#c5809d"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" ("
+                    android:textColor="#c5809d"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&lt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="ThemeContext.Provider"
+                    android:textColor="#539ad2"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="  value"
+                    android:textColor="#A7C9E4"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="="
+                    android:textColor="#9b9b9b"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&quot;dark&quot;"
+                    android:textColor="#c89073"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&gt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="90dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&lt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="Child"
+                    android:textColor="#539ad2"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="  /"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&gt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="50dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&lt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="/"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="ThemeContext.Provider"
+                    android:textColor="#539ad2"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&gt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=")"
+                    android:textColor="#c5809d"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=";"
+                    android:textColor="#9b9b9b"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_semibold"
+                android:letterSpacing=".01"
+                android:text="}"
+                android:textColor="#ffd700"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="funcation"
+                    android:textColor="#b386bb"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" Child"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="()"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" {"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="const"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" theme"
+                    android:textColor="#C6D3DC"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" = "
+                    android:textColor="#9b9b9b"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="React"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="createContext"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="("
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="ThemeContext"
+                    android:textColor="#5cb8f5"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=")"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=";"
+                    android:textColor="#9b9b9b"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text=" return "
+                    android:textColor="#c5809d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&lt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="div"
+                    android:textColor="#539ad2"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&gt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="Theme: "
+                    android:textColor="#CFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="{"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="theme"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="}"
+                    android:textColor="#ffd700"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&lt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="\/"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="div"
+                    android:textColor="#539ad2"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="&gt;"
+                    android:textColor="#807f7c"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/afacad_semibold"
+                android:letterSpacing=".01"
+                android:text="}"
+                android:textColor="#ffd700"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

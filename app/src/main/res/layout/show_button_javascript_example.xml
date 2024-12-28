@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_of_show_include"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:textColor="#807f7c"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"
+        android:textColor="#539ad2"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" onclick"
+        android:textColor="#B5CFE9"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:textColor="#9b9b9b"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/afacad_semibold"
+        android:letterSpacing=".01"
+        android:text="{"
+        android:textColor="#539ad2"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="()"
+        android:textColor="#ffd700"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" =>"
+        android:textColor="#539ad2"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" alert"
+        android:textColor="#dcdc9e"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="("
+        android:textColor="#ffd700"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="'Clicked'"
+        android:textColor="#c89073"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=")"
+        android:textColor="#ffd700"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="}"
+        android:textColor="#539ad2"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&gt;"
+        android:textColor="#539ad2"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click me"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="60dp"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:textColor="#807f7c"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"
+        android:textColor="#539ad2"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&gt;"
+        android:textColor="#807f7c"
+        android:fontFamily="@font/afacad_semibold"
+        android:textSize="18sp" />
+
+</LinearLayout>
+
+</LinearLayout>

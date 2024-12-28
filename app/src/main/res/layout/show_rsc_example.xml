@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/radius_of_show_include">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_semibold"
+                    android:letterSpacing=".01"
+                    android:text="export default async function ProductList() {\n\t\t\tconst products = await fetch('/api/products').then((res) =&gt; res.json());\n\t\t\treturn (\n\t\t\t\t\t\ &lt;ul&gt;\n\t\t\t\t\t\t\t\t\t\{products.map((product) =&gt; (\n\t\t\t\t\t\t\t\t\t&lt;li key={product.id}&gt;{product.name}&lt;/li&gt;\n\t\t\t\t\t\t\t\t\t\t))}\n\t\t\t\t\t\t&lt;/ul&gt;\n\t\t\t);\n}"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

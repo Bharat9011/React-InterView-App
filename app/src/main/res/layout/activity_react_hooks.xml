@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A00DCFF"
+    android:scrollbarSize="0dp"
+    tools:context=".IntroducationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="React Hooks" />
+
+        <!-- Question 1 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. What are React Hooks? Why were they introduced?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hooks are special functions introduced in React 16.8 to let functional components use state and lifecycle features. They simplify the codebase, avoiding the need for class components and enabling reusable logic through custom Hooks." />
+
+        <!-- Question 2 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Explain the useState Hook. Provide a simple example." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The useState Hook manages state in a functional component.\n\nFor example: const [count, setCount] = useState(0); setCount(count + 1);" />
+
+        <!-- Question 3 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. What is the purpose of the useEffect Hook? When does it run by default?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The useEffect Hook handles side effects like API calls or subscriptions. By default, it runs after the component renders or updates." />
+
+        <!-- Question 4 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. What are the rules of Hooks?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hooks must be called at the top level of a function and only inside React functional components or custom Hooks." />
+
+        <!-- Question 5 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Can you use Hooks in Class Components? Why or why not?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No, Hooks are only for functional components because class components use lifecycle methods." />
+
+        <!-- Question 6 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. What is a custom Hook? Why would you create one?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A custom Hook is a function starting with 'use' that encapsulates reusable logic. For example, sharing data-fetching logic between components." />
+
+        <!-- Question 7 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. Explain the difference between useState and useReducer." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useState is for simple state logic, while useReducer is for complex logic with multiple actions or state transitions." />
+
+        <!-- Question 8 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. Can you call a Hook conditionally? Why or why not?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No, Hooks must be called unconditionally because React relies on the order of Hook calls to manage state correctly." />
+
+        <!-- Question 9 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. How do you pass initial state to useState dynamically?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You can pass a function to useState for lazy initialization.\n\nExample: const [state, setState] = useState(() => computeInitialState());" />
+
+        <!-- Question 10 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. Explain the dependency array in useEffect. What happens if it is missing?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The dependency array specifies when the effect should run. Without it, the effect runs after every render, potentially causing performance issues." />
+
+        <!-- Question 11 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. How would you fetch data from an API using useEffect?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use an async function inside useEffect.\n\nExample: useEffect(() => { fetchData(); }, []);" />
+
+        <!-- Question 12 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. What is the useRef Hook, and how is it different from useState?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useRef is used to persist values or access DOM elements without triggering re-renders, unlike useState, which causes re-renders." />
+
+        <!-- Question 13 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. Describe the useCallback Hook. When would you use it?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useCallback memoizes functions to prevent re-creation on every render. Use it when passing functions as props to avoid unnecessary re-renders of child components." />
+
+        <!-- Question 14 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14. How does the useMemo Hook work? Provide an example use case." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useMemo memoizes the result of a function to avoid recalculating it on every render. Example: const expensiveValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);" />
+
+        <!-- Question 15 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15. What is the purpose of useContext Hook? How does it simplify state management?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useContext provides a way to access global state, avoiding prop drilling. It simplifies state management by letting you share data across components without passing props manually." />
+
+        <!-- Question 16 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16. How do you handle cleanup in useEffect? Why is cleanup important?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cleanup in useEffect is done by returning a function from the effect. This is essential to avoid memory leaks, clear timers, or unsubscribe from services when the component unmounts." />
+
+        <!-- Question 17 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17. Can you use multiple useEffect Hooks in one component? Explain why or why not." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes, you can use multiple useEffect Hooks in a single component. Each useEffect can handle a separate logic or side effect, making the component more readable." />
+
+        <!-- Question 18 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18. Explain the purpose of useLayoutEffect. How is it different from useEffect?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useLayoutEffect works similarly to useEffect, but it runs synchronously after DOM updates and before the paint. It is useful when you need to measure or adjust the layout before the screen updates." />
+
+        <!-- Question 19 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19. How can you optimize re-renders using React.memo and useCallback together?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React.memo prevents unnecessary re-renders of child components when props don’t change. useCallback ensures that functions passed as props are not recreated unnecessarily on each render." />
+
+        <!-- Question 20 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20. What are closures in JavaScript, and how can they cause bugs in React Hooks?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Closures retain references to variables from their lexical scope. In React, closures can cause bugs when state values are not correctly captured in effect functions, leading to stale data or unexpected results." />
+
+        <!-- Question 21 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21. Explain how useReducer works. When would you choose it over useState?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useReducer manages state with a dispatch function and a reducer. It is ideal for managing complex state logic with multiple actions, unlike useState, which is better for simpler state updates." />
+
+        <!-- Question 22 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22. How do you handle race conditions when using useEffect for fetching data?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Race conditions can be avoided by using cleanup functions or tracking whether a component is mounted. Example: Let a variable flag indicate if the component is still mounted before updating state." />
+
+        <!-- Question 23 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23. Explain the difference between useMemo and useCallback. How do they impact performance?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useMemo is for memoizing values and useCallback is for memoizing functions. Both hooks optimize performance by avoiding unnecessary recalculations or re-creations, but useMemo is for values and useCallback for functions." />
+
+        <!-- Question 24 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24. What is the useImperativeHandle Hook? Provide a use case for it." />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="useImperativeHandle customizes the values exposed by useRef. It is useful when you want to expose only specific properties or methods to parent components." />
+
+        <!-- Question 25 -->
+        <TextView
+            style="@style/QuestionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25. How does React ensure the correct state is managed when using multiple Hooks in a component?" />
+
+        <TextView
+            style="@style/AnswerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="React ensures that each Hook has a specific state associated with it by maintaining the order of Hooks between renders. This guarantees state consistency." />
+
+
+    </LinearLayout>
+
+</ScrollView>
