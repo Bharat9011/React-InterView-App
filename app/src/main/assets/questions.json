@@ -1,0 +1,818 @@
+[
+  {
+    "id": 1,
+    "subtopicId": 101,
+    "question": "What is React and what are its key features?",
+    "answer": "React is an open-source JavaScript library developed by Meta for building dynamic, fast user interfaces for web and mobile applications.\n\nKey features:\n• Component-Based Architecture: UIs are composed of small, isolated, reusable components.\n• Virtual DOM: High-performance in-memory DOM diffing.\n• Declarative Syntax: You describe what the UI should look like for a given state, and React handles DOM updates.\n• Unidirectional Data Flow: Predictable one-way state and prop passing."
+  },
+  {
+    "id": 2,
+    "subtopicId": 101,
+    "question": "Why is React referred to as a library rather than a full-fledged framework?",
+    "answer": "Frameworks (like Angular) are opinionated and provide complete, built-in systems for routing, HTTP requests, state management, and form validation out of the box.\n\nReact only handles the View layer of an application (the 'V' in MVC). Developers are free to choose their own libraries for routing (React Router), server requests (Axios/TanStack Query), and state management (Zustand/Redux), making React lightweight and flexible."
+  },
+  {
+    "id": 3,
+    "subtopicId": 101,
+    "question": "What is a Single Page Application (SPA) and how does React enable it?",
+    "answer": "A Single Page Application loads a single HTML file on initial page load and dynamically rewrites page content as the user interacts, without making full-page browser reloads to the server.\n\nReact enables SPAs by intercepting browser navigation via client-side routers (like React Router), fetching raw JSON data from backend APIs asynchronously, and updating only the relevant components in the DOM dynamically."
+  },
+  {
+    "id": 4,
+    "subtopicId": 101,
+    "question": "What is the difference between Imperative and Declarative UI programming?",
+    "answer": "• Imperative (e.g. Vanilla JS, jQuery): You manually instruct the browser step-by-step how to manipulate the DOM (e.g. document.getElementById, createElement, appendChild, addEventListener).\n\n• Declarative (React): You describe what the UI should render given the current application state (e.g. <h1>{title}</h1>). React takes care of updating the actual DOM to match that declaration behind the scenes."
+  },
+  {
+    "id": 5,
+    "subtopicId": 102,
+    "question": "What is the Virtual DOM and why does React use it?",
+    "answer": "The Virtual DOM is an in-memory JavaScript object representation of the real browser DOM.\n\nDirect browser DOM operations are computationally slow because they trigger expensive browser reflows and repaints. React maintains two Virtual DOM snapshots (current vs updated), computes the minimal changes needed via diffing, and applies all updates in a single batch to the real DOM."
+  },
+  {
+    "id": 6,
+    "subtopicId": 102,
+    "question": "How does React's Reconciliation (Diffing) algorithm work?",
+    "answer": "React uses a heuristic O(n) algorithm based on two key assumptions:\n\n1. Different element types produce different trees (switching <div> to <span> unmounts the old tree and mounts a new one).\n2. Child elements can be differentiated across renders using a stable 'key' prop to track movements, additions, and deletions efficiently."
+  },
+  {
+    "id": 7,
+    "subtopicId": 102,
+    "question": "What is React Fiber and how does it improve UI responsiveness?",
+    "answer": "React Fiber is the complete rewrite of React's core reconciliation engine introduced in React 16.\n\nUnlike the legacy synchronous call stack, Fiber can:\n• Pause, prioritize, and resume rendering work.\n• Break complex rendering jobs into incremental slices across animation frames.\n• Ensure high-priority user interactions (typing, clicks) are never blocked by heavy background computations."
+  },
+  {
+    "id": 8,
+    "subtopicId": 102,
+    "question": "How does React batch state updates during re-renders?",
+    "answer": "Batching means React groups multiple state update calls into a single re-render for optimal performance.\n\nIn React 18+, Automatic Batching applies everywhere: inside event handlers, setTimeout/setInterval callbacks, Promises, and native event listeners, eliminating unnecessary intermediate UI repaints."
+  },
+  {
+    "id": 9,
+    "subtopicId": 103,
+    "question": "What is JSX and how is it transformed by Babel?",
+    "answer": "JSX is a syntax extension for JavaScript that allows you to write HTML-like markup directly inside JavaScript files.\n\nBrowsers cannot execute JSX natively. Build tools like Babel or esbuild compile JSX into standard React.createElement() function calls:\n\nJSX: <h1 className='title'>Hello</h1>\nCompiled: React.createElement('h1', { className: 'title' }, 'Hello')"
+  },
+  {
+    "id": 10,
+    "subtopicId": 103,
+    "question": "Why can JSX components only return a single root element?",
+    "answer": "Because JSX compiles to a function call (React.createElement). A JavaScript function cannot return multiple separate values without wrapping them in an array or single parent object.\n\nTo group multiple adjacent elements without adding unwanted <div> wrappers to the DOM, use React Fragments (<> ... </>)."
+  },
+  {
+    "id": 11,
+    "subtopicId": 103,
+    "question": "How do you embed JavaScript expressions and comments inside JSX?",
+    "answer": "• Expressions: Wrap any valid JavaScript expression (variables, functions, ternary operators, array maps) inside curly braces { } (e.g. <span>{user.name}</span>).\n\n• Comments: Write multi-line block comments inside curly braces: {/* This is a JSX comment */}."
+  },
+  {
+    "id": 12,
+    "subtopicId": 103,
+    "question": "Why does JSX use className and htmlFor instead of class and for?",
+    "answer": "JSX is an extension of JavaScript, not raw HTML. In JavaScript, 'class' and 'for' are reserved keywords:\n• 'class' defines ES6 classes.\n• 'for' defines for-loops.\n\nTo avoid syntax parsing conflicts, React attributes use camelCase alternatives: 'className' for CSS classes and 'htmlFor' for form label associations."
+  },
+  {
+    "id": 13,
+    "subtopicId": 201,
+    "question": "How do you structure a scalable, production-ready React codebase?",
+    "answer": "Use feature-based architecture:\n• src/components/: Shared generic UI primitives (Button, Modal, Input).\n• src/features/: Domain modules (auth, dashboard, cart) with their own components, hooks, and api.\n• src/hooks/: Reusable application-wide custom hooks.\n• src/services/: Axios client and API wrappers.\n• src/utils/: Pure helper functions."
+  },
+  {
+    "id": 14,
+    "subtopicId": 201,
+    "question": "Why is Vite significantly faster than Create React App (CRA)?",
+    "answer": "CRA uses Webpack, which bundles the entire application before starting the dev server.\n\nVite serves source code over native ES Modules (ESM) and pre-bundles dependencies with esbuild (written in Go), delivering instant dev server starts (<300ms) and lightning-fast Hot Module Replacement (HMR)."
+  },
+  {
+    "id": 15,
+    "subtopicId": 201,
+    "question": "How do you manage environment variables in React safely?",
+    "answer": "Prefix variables according to bundler conventions (VITE_API_URL in Vite, REACT_APP_API_URL in CRA).\n\nRule: Client environment variables are bundled directly into public JS files. Never store database credentials or secret private keys in client .env files."
+  },
+  {
+    "id": 16,
+    "subtopicId": 201,
+    "question": "What are the main benefits of using TypeScript with React?",
+    "answer": "• Compile-Time Safety: Catches missing props, incorrect types, and undefined bugs before runtime.\n• Autocomplete & IntelliSense: Speeds up development with rich prop suggestions.\n• Refactoring Confidence: Renaming props safely updates across the entire codebase."
+  },
+  {
+    "id": 17,
+    "subtopicId": 202,
+    "question": "What is the purpose of ESLint, Prettier, and Husky pre-commit hooks?",
+    "answer": "• ESLint: Catches syntax bugs and enforces React rules (like hook dependency arrays).\n• Prettier: Automatically formats code with uniform rules.\n• Husky + lint-staged: Runs linter and type checks on staged files before allowing git commits, preventing broken code from entering repositories."
+  },
+  {
+    "id": 18,
+    "subtopicId": 202,
+    "question": "How do you optimize production React bundle size using bundle visualizers?",
+    "answer": "Run rollup-plugin-visualizer or webpack-bundle-analyzer to generate a graphical treemap of all bundle dependencies. Identify bloated libraries (like moment.js) and replace them with lighter alternatives (date-fns, dayjs)."
+  },
+  {
+    "id": 19,
+    "subtopicId": 202,
+    "question": "How do you handle SEO in a Single Page Application?",
+    "answer": "• Client-side SPAs: Use react-helmet-async to dynamically update title, description, and OpenGraph tags per route.\n• Prerendering: Use SSG (Next.js/Astro) to deliver pre-rendered static HTML to search engine crawlers."
+  },
+  {
+    "id": 20,
+    "subtopicId": 202,
+    "question": "How do you enforce accessibility (a11y) in React applications?",
+    "answer": "• Use semantic HTML elements (<button>, <nav>, <header>).\n• Add eslint-plugin-jsx-a11y to flag missing alt attributes and invalid ARIA roles.\n• Ensure full keyboard navigation support (Tab, Enter, Escape on dialogs)."
+  },
+  {
+    "id": 21,
+    "subtopicId": 301,
+    "question": "What are Functional Components vs Class Components?",
+    "answer": "• Functional Components: JavaScript functions accepting props and returning JSX. They use React Hooks (useState, useEffect) for state and lifecycle, require less boilerplate, and are the modern industry standard.\n\n• Class Components: ES6 classes extending React.Component that define a render() method and explicit lifecycle hooks (componentDidMount). They require 'this' binding and are considered legacy."
+  },
+  {
+    "id": 22,
+    "subtopicId": 301,
+    "question": "What are Pure Components and React.memo?",
+    "answer": "A Pure Component only re-renders when its props or state have shallowly changed.\n\n• In Class Components: Extend React.PureComponent to automatically implement shouldComponentUpdate() with shallow prop/state comparison.\n• In Functional Components: Wrap the component with React.memo(MyComponent) to skip re-rendering when props remain unchanged."
+  },
+  {
+    "id": 23,
+    "subtopicId": 301,
+    "question": "What is Component Composition and why is it favored over inheritance?",
+    "answer": "Component composition is the pattern of building complex UIs by nesting and combining smaller, specialized components together (using props and the 'children' prop).\n\nReact favors composition over inheritance because it provides greater flexibility, avoids brittle base class hierarchies, and allows components to be reused across distinct features without tight coupling."
+  },
+  {
+    "id": 24,
+    "subtopicId": 301,
+    "question": "What are React Fragments and when should you use them?",
+    "answer": "React Fragments (<>...</> or <React.Fragment>) let you group a list of child elements without adding unnecessary wrapper DOM nodes (like extra <div>s).\n\nBenefits:\n• Keeps HTML structure lean.\n• Prevents breaking CSS Flexbox / Grid child relationships.\n• Supports table structures (<tr><td>).\n• Use the full <React.Fragment key={item.id}> syntax when rendering lists that require a key prop."
+  },
+  {
+    "id": 25,
+    "subtopicId": 302,
+    "question": "What is the fundamental difference between props and state?",
+    "answer": "• props (properties): Passed from parent to child component. Props are read-only (immutable) in the child and serve as external configuration or inputs.\n\n• state: Private, local data managed internally by the component. State is mutable through setter functions (setCount). Modifying state causes React to re-render the component and its children."
+  },
+  {
+    "id": 26,
+    "subtopicId": 302,
+    "question": "Why should state never be mutated directly in React?",
+    "answer": "Direct mutation (e.g. state.count = 5 or list.push(item)) does not notify React of changes, meaning the component will not re-render and the UI will become out of sync with the data.\n\nAlways use setter functions with new object/array copies (e.g. setCount(prev => prev + 1) or setItems([...items, newItem])) to preserve immutability and allow shallow comparison."
+  },
+  {
+    "id": 27,
+    "subtopicId": 302,
+    "question": "What is 'Props Drilling' and how can it be solved?",
+    "answer": "Props drilling occurs when data is passed through multiple intermediate levels of components that don't need the data themselves, just to deliver it to a deeply nested child.\n\nSolutions:\n• React Context API: Broadcasts values across the component subtree.\n• Component Composition: Passing components as children or JSX props directly.\n• Global State: Zustand or Redux Toolkit."
+  },
+  {
+    "id": 28,
+    "subtopicId": 302,
+    "question": "What is one-way data binding (unidirectional data flow)?",
+    "answer": "Data flows in one direction: from parent components down to child components via props. Children cannot mutate parent state directly.\n\nTo communicate upward, parents pass callback functions down as props. When triggered by user action, the child invokes the callback to request a state update in the parent."
+  },
+  {
+    "id": 29,
+    "subtopicId": 303,
+    "question": "What is SyntheticEvent in React and how does event delegation work?",
+    "answer": "SyntheticEvent is a cross-browser wrapper around native browser events. It normalizes event properties across all browsers, providing consistent behavior.\n\nReact uses event delegation by attaching a single root event listener to the root DOM node rather than attaching handlers to individual HTML elements, conserving memory and improving performance."
+  },
+  {
+    "id": 30,
+    "subtopicId": 303,
+    "question": "Why is the 'key' prop essential when rendering lists, and why avoid index as a key?",
+    "answer": "The 'key' prop provides a stable identity for list items so React's diffing algorithm can identify which items were added, removed, or reordered without re-rendering the entire list.\n\nWhy avoid array index (key={index}): If items are inserted, deleted, or sorted, the indexes shift, causing state mix-ups, broken animations, and incorrect input values. Always use unique, stable IDs (e.g. item.id)."
+  },
+  {
+    "id": 31,
+    "subtopicId": 303,
+    "question": "What is Conditional Rendering and what are the best techniques?",
+    "answer": "Conditional rendering displays different UI depending on application state:\n\n• Ternary Operator: {isAuth ? <Dashboard /> : <Login />}\n• Logical AND (&&): {hasUnread && <Badge count={unreadCount} />}\n• Early Return: Return null or a skeleton loader before main JSX.\n• Switch / Lookup Objects: For multi-step wizards and status screens."
+  },
+  {
+    "id": 32,
+    "subtopicId": 303,
+    "question": "What is 'Lifting State Up' and when is it necessary?",
+    "answer": "When two or more sibling components need access to the same changing state, you 'lift' that state up to their closest common ancestor component.\n\nThe ancestor holds the single source of truth and passes down the current state value via props, along with callback functions allowing siblings to update it."
+  },
+  {
+    "id": 33,
+    "subtopicId": 401,
+    "question": "What are React Hooks and what are the two core Rules of Hooks?",
+    "answer": "Hooks are functions that let functional components hook into React state and lifecycle features.\n\nTwo Core Rules:\n1. Only Call Hooks at the Top Level: Never call Hooks inside loops, conditions, or nested functions to ensure Hooks are called in the exact same order on every render.\n2. Only Call Hooks from React Functions: Call them only from functional components or custom Hooks."
+  },
+  {
+    "id": 34,
+    "subtopicId": 401,
+    "question": "How does useState work and when should you use the functional updater form?",
+    "answer": "useState declares a state variable and returns a pair: [currentState, setterFunction].\n\nUse the functional updater form (setCount(prev => prev + 1)) whenever the new state depends on the previous state. Because state updates may be asynchronous or batched, the functional form guarantees access to the latest state value."
+  },
+  {
+    "id": 35,
+    "subtopicId": 401,
+    "question": "How does useEffect handle mounting, updating, and unmounting?",
+    "answer": "• Mount (componentDidMount): Pass an empty dependency array: useEffect(() => {}, []).\n• Update (componentDidUpdate): Pass specific dependencies: useEffect(() => {}, [user, page]).\n• Unmount (componentWillUnmount): Return a cleanup function: useEffect(() => { return () => cleanup(); }, [])."
+  },
+  {
+    "id": 36,
+    "subtopicId": 401,
+    "question": "What is the cleanup function in useEffect and when does it execute?",
+    "answer": "The cleanup function is the function returned from the useEffect callback:\n\nuseEffect(() => {\n    const timer = setInterval(...);\n    return () => clearInterval(timer);\n}, []);\n\nIt runs right before the component unmounts AND before re-running the effect on subsequent renders when dependencies change, preventing memory leaks and orphaned subscriptions."
+  },
+  {
+    "id": 37,
+    "subtopicId": 402,
+    "question": "What is useMemo and when should you use it?",
+    "answer": "useMemo caches the result of an expensive calculation between renders:\n\nconst total = useMemo(() => calculateTotal(items), [items]);\n\nIt only re-executes the calculation when one of the specified dependencies changes. Use it for heavy filtering, sorting, or complex mathematical transformations."
+  },
+  {
+    "id": 38,
+    "subtopicId": 402,
+    "question": "What is useCallback and how does it prevent unnecessary re-renders?",
+    "answer": "useCallback caches a function definition between renders:\n\nconst handleClick = useCallback(() => doSomething(id), [id]);\n\nIn JavaScript, functions declared inside a component are recreated with new memory references on every render. useCallback preserves referential equality so child components wrapped in React.memo don't re-render needlessly."
+  },
+  {
+    "id": 39,
+    "subtopicId": 402,
+    "question": "What is referential equality and how does it affect React dependencies?",
+    "answer": "In JavaScript, objects, arrays, and functions are compared by memory reference, not by their content ({ a: 1 } !== { a: 1 }).\n\nIf you define an object or function inside a component without useMemo or useCallback, it gets a new reference on every render, causing useEffect or child components depending on it to re-run every time."
+  },
+  {
+    "id": 40,
+    "subtopicId": 402,
+    "question": "Why is wrapping every function in useCallback considered an anti-pattern?",
+    "answer": "useCallback is not free; it adds overhead by creating dependency arrays, allocating memory, and performing comparison checks on every render.\n\nWrapping simple functions that are passed to basic HTML elements (like <button onClick={...}>) wastes memory. Only use useCallback when passing callbacks to optimized children wrapped in React.memo or as useEffect dependencies."
+  },
+  {
+    "id": 41,
+    "subtopicId": 403,
+    "question": "What is useRef and how is it used to access DOM elements?",
+    "answer": "useRef returns a mutable object with a .current property that persists across renders:\n\nconst inputRef = useRef(null);\n<input ref={inputRef} />\ninputRef.current.focus();\n\nAssigning it to a JSX ref attribute gives direct access to the underlying DOM node without causing component re-renders."
+  },
+  {
+    "id": 42,
+    "subtopicId": 403,
+    "question": "How can useRef store mutable values without triggering re-renders?",
+    "answer": "Updating ref.current (e.g. timerRef.current = id) mutates the stored value silently without triggering a component re-render.\n\nThis makes useRef ideal for tracking timers, previous prop/state values, WebSocket instances, and render counters where UI updates are not needed."
+  },
+  {
+    "id": 43,
+    "subtopicId": 403,
+    "question": "When should you use useReducer instead of useState?",
+    "answer": "useReducer is preferred when:\n• State has complex nested logic or multiple related sub-values.\n• The next state depends on multiple previous state values.\n• Different actions trigger specific predictable state transitions (pattern matching actions and reducers like Redux)."
+  },
+  {
+    "id": 44,
+    "subtopicId": 403,
+    "question": "How do you build a Custom Hook in React?",
+    "answer": "A Custom Hook is a JavaScript function whose name starts with 'use' and can call other React Hooks:\n\nfunction useWindowWidth() {\n    const [width, setWidth] = useState(window.innerWidth);\n    useEffect(() => {\n        const handleResize = () => setWidth(window.innerWidth);\n        window.addEventListener('resize', handleResize);\n        return () => window.removeEventListener('resize', handleResize);\n    }, []);\n    return width;\n}\n\nCustom hooks encapsulate and share stateful logic between components cleanly."
+  },
+  {
+    "id": 45,
+    "subtopicId": 501,
+    "question": "What is the difference between Controlled and Uncontrolled form components?",
+    "answer": "• Controlled: Form input value is driven directly by React state (<input value={email} onChange={e => setEmail(e.target.value)} />). React is the single source of truth, enabling real-time validation and disabled states.\n\n• Uncontrolled: Form input state is handled by the browser DOM itself. Values are retrieved on submission using React refs (inputRef.current.value)."
+  },
+  {
+    "id": 46,
+    "subtopicId": 501,
+    "question": "How do you handle multiple form inputs with a single onChange handler?",
+    "answer": "Give each input a 'name' attribute matching the state object property key:\n\nconst handleChange = (e) => {\n    const { name, value } = e.target;\n    setFormData(prev => ({ ...prev, [name]: value }));\n};\n\nUsing dynamic property keys ([name]: value) avoids creating separate handlers for every field."
+  },
+  {
+    "id": 47,
+    "subtopicId": 501,
+    "question": "Why is a file input (<input type='file' />) always an uncontrolled component?",
+    "answer": "Because a file input's value is read-only and can only be set by the user through browser security policies, not programmatically via JavaScript.\n\nTo access selected files in React, read the event target (e.target.files[0]) or use a ref (fileInputRef.current.files[0])."
+  },
+  {
+    "id": 48,
+    "subtopicId": 501,
+    "question": "What causes the warning: 'A component is changing an uncontrolled input to be controlled'?",
+    "answer": "This occurs when an input's initial value is undefined or null, and later updates to a defined string.\n\nFix: Always initialize state with an empty string or default value: const [text, setText] = useState('') instead of useState()."
+  },
+  {
+    "id": 49,
+    "subtopicId": 502,
+    "question": "Why is React Hook Form preferred over Formik in modern React apps?",
+    "answer": "React Hook Form uses uncontrolled inputs under the hood with refs, which drastically reduces component re-renders as the user types.\n\nFormik relies on controlled inputs and re-renders the entire form component on every keystroke, causing noticeable lag in large, complex forms."
+  },
+  {
+    "id": 50,
+    "subtopicId": 502,
+    "question": "How do you integrate Zod schema validation with React Hook Form?",
+    "answer": "Use the @hookform/resolvers/zod package:\n\nconst schema = z.object({\n    email: z.string().email(),\n    password: z.string().min(8)\n});\n\nconst { register, handleSubmit, formState: { errors } } = useForm({\n    resolver: zodResolver(schema)\n});\n\nThis automatically validates inputs against the Zod schema and generates TypeScript types."
+  },
+  {
+    "id": 51,
+    "subtopicId": 502,
+    "question": "How do you handle asynchronous server-side validation (e.g. check username availability)?",
+    "answer": "In React Hook Form, use custom async validation rules:\n\n<input {...register('username', {\n    validate: async (val) => {\n        const isAvailable = await checkUsername(val);\n        return isAvailable || 'Username is already taken';\n    }\n})} />\n\nDebounce the API call to avoid spamming the backend server on every keystroke."
+  },
+  {
+    "id": 52,
+    "subtopicId": 502,
+    "question": "How do you reset a form properly in React Hook Form after submission?",
+    "answer": "Call the reset() function provided by useForm:\n\nconst onSubmit = async (data) => {\n    await api.post('/users', data);\n    reset(); // Clears all inputs and reset dirty/touched states\n};\n\nYou can also pass default values: reset({ name: '', email: '' })."
+  },
+  {
+    "id": 53,
+    "subtopicId": 601,
+    "question": "What are CSS Modules and how do they eliminate global class collisions?",
+    "answer": "CSS Modules are CSS files where all class names are scoped locally by default (Button.module.css).\n\nWhen imported (import styles from './Button.module.css'), the bundler automatically generates unique hashed class names (e.g. Button_btn__a83f1), ensuring styles from one component never accidentally clash with another."
+  },
+  {
+    "id": 54,
+    "subtopicId": 601,
+    "question": "What are the advantages and limitations of Inline Styles in React?",
+    "answer": "• Advantages: Simple syntax (style={{ color: 'blue' }}), dynamic JavaScript calculations, no extra CSS files required.\n\n• Limitations: No support for pseudo-classes (:hover, :focus), pseudo-elements (::after), or media queries (@media); slightly slower performance because new style objects are created on each render."
+  },
+  {
+    "id": 55,
+    "subtopicId": 601,
+    "question": "How do you conditionally apply CSS classes in React?",
+    "answer": "Using template literals or the clsx / classnames library:\n\n// Template literal:\nclassName={`btn ${isActive ? 'btn-active' : ''}`}\n\n// With clsx library:\nclassName={clsx('btn', { 'btn-active': isActive, 'btn-disabled': isDisabled })}"
+  },
+  {
+    "id": 56,
+    "subtopicId": 601,
+    "question": "What is SASS/SCSS and how do you use it in React?",
+    "answer": "SASS/SCSS is a CSS preprocessor offering nesting, variables, mixins, and inheritance.\n\nIn Vite or CRA, simply install sass (npm install -D sass) and rename files to .scss or .module.scss. React bundlers compile them automatically."
+  },
+  {
+    "id": 57,
+    "subtopicId": 602,
+    "question": "What is Tailwind CSS and why is it popular with React developers?",
+    "answer": "Tailwind CSS is a utility-first CSS framework providing atomic classes (e.g. flex, p-4, text-center, bg-blue-500) applied directly in JSX.\n\nWhy popular:\n• No context switching between JS and CSS files.\n• Automatic purge/tree-shaking generates tiny production stylesheets.\n• Built-in responsive modifiers (md:flex, lg:p-8) and dark mode (dark:bg-slate-900)."
+  },
+  {
+    "id": 58,
+    "subtopicId": 602,
+    "question": "What is CSS-in-JS and how do styled-components work?",
+    "answer": "CSS-in-JS writes CSS styles directly inside JavaScript using tagged template literals:\n\nconst Button = styled.button`\n    background: ${props => props.primary ? 'blue' : 'gray'};\n    padding: 10px 20px;\n`;\n\nIt generates unique classes, handles vendor prefixing, and allows dynamic styling based on component props."
+  },
+  {
+    "id": 59,
+    "subtopicId": 602,
+    "question": "How do you implement Dark/Light theme switching in React?",
+    "answer": "• Use CSS variables (--bg-primary, --text-primary) or Tailwind dark classes.\n• Store active preference in localStorage and React state.\n• Toggle the 'dark' class on document.documentElement (<html class='dark'>).\n• Sync with system preference via window.matchMedia('(prefers-color-scheme: dark)')."
+  },
+  {
+    "id": 60,
+    "subtopicId": 602,
+    "question": "What are CSS Variables and how does React interact with them?",
+    "answer": "CSS Variables (Custom Properties) define reusable values in CSS (--brand-color: #0284c7).\n\nReact can update CSS variables dynamically via inline styles: <div style={{ '--user-color': activeColor } as React.CSSProperties}>, allowing full component subtrees to inherit dynamic values with zero re-rendering overhead."
+  },
+  {
+    "id": 61,
+    "subtopicId": 701,
+    "question": "What is React Router and what are its core components?",
+    "answer": "React Router is the standard client-side routing library for React SPAs.\n\nCore Components:\n• BrowserRouter: Connects the application to the browser's HTML5 History API.\n• Routes: Container for all route declarations.\n• Route: Maps a URL path pattern to a specific React component element (<Route path='/about' element={<About />} />)."
+  },
+  {
+    "id": 62,
+    "subtopicId": 701,
+    "question": "What is the difference between Link, NavLink, and traditional <a> tags?",
+    "answer": "• <a> tags: Cause a full browser page refresh, destroying client state.\n• <Link>: Intercepts clicks and updates the URL via client-side routing without reloading.\n• <NavLink>: Extends Link with automatic active class styling based on whether the current URL matches the link destination."
+  },
+  {
+    "id": 63,
+    "subtopicId": 701,
+    "question": "What is the difference between BrowserRouter and HashRouter?",
+    "answer": "• BrowserRouter: Uses modern HTML5 History API for clean URLs (example.com/profile). Requires server-side fallback rewrite to index.html.\n\n• HashRouter: Uses the URL hash symbol (example.com/#/profile). Useful for static hosting without server rewrite control, but looks outdated and is worse for SEO."
+  },
+  {
+    "id": 64,
+    "subtopicId": 701,
+    "question": "How do you handle 404 Not Found routes in React Router v6+?",
+    "answer": "Add a wildcard catch-all route at the bottom of your <Routes> definition:\n\n<Routes>\n    <Route path='/' element={<Home />} />\n    <Route path='*' element={<NotFoundPage />} />\n</Routes>\n\nAny URL that doesn't match a defined route will automatically render NotFoundPage."
+  },
+  {
+    "id": 65,
+    "subtopicId": 702,
+    "question": "How do you define and access URL parameters using useParams?",
+    "answer": "Define route with a colon placeholder:\n<Route path='/users/:userId' element={<UserProfile />} />\n\nIn UserProfile, access the parameter value:\nconst { userId } = useParams();"
+  },
+  {
+    "id": 66,
+    "subtopicId": 702,
+    "question": "How do you read and update query string parameters using useSearchParams?",
+    "answer": "useSearchParams works similarly to useState:\n\nconst [searchParams, setSearchParams] = useSearchParams();\nconst query = searchParams.get('q');\n\n// Update query param:\nsetSearchParams({ q: 'react', page: '2' });"
+  },
+  {
+    "id": 67,
+    "subtopicId": 702,
+    "question": "What are Nested Routes and how does the <Outlet /> component work?",
+    "answer": "Nested routes render parent and child components together within persistent layout wrappers (e.g. Dashboard sidebar).\n\nParent route specifies an <Outlet /> placeholder: child route components are dynamically injected and rendered where the <Outlet /> sits."
+  },
+  {
+    "id": 68,
+    "subtopicId": 702,
+    "question": "How do you perform programmatic navigation using useNavigate?",
+    "answer": "const navigate = useNavigate();\n\n// Navigate to path:\nnavigate('/dashboard');\n\n// Navigate back:\nnavigate(-1);\n\n// Replace history entry:\nnavigate('/login', { replace: true });"
+  },
+  {
+    "id": 69,
+    "subtopicId": 703,
+    "question": "How do you implement Protected Routes in React Router v6+?",
+    "answer": "Create an AuthGuard wrapper component:\n\nconst ProtectedRoute = () => {\n    const { isAuthenticated } = useAuth();\n    return isAuthenticated ? <Outlet /> : <Navigate to='/login' replace />;\n};\n\nWrap secure routes inside: <Route element={<ProtectedRoute />}>."
+  },
+  {
+    "id": 70,
+    "subtopicId": 703,
+    "question": "How do you redirect a user and remember their original destination after login?",
+    "answer": "Pass the current location in state when redirecting:\n<Navigate to='/login' state={{ from: location }} replace />\n\nAfter login success, read the previous path:\nconst from = location.state?.from?.pathname || '/dashboard';\nnavigate(from, { replace: true });"
+  },
+  {
+    "id": 71,
+    "subtopicId": 703,
+    "question": "How do you lazy-load route components with React.lazy and Suspense?",
+    "answer": "const Profile = React.lazy(() => import('./Profile'));\n\n<Suspense fallback={<LoadingSpinner />}>\n    <Routes>\n        <Route path='/profile' element={<Profile />} />\n    </Routes>\n</Suspense>\n\nThis creates separate JS chunks downloaded only when the route is visited."
+  },
+  {
+    "id": 72,
+    "subtopicId": 703,
+    "question": "How do loaders and actions work in modern Data Routers (v6.4+)?",
+    "answer": "Data routers allow declaring data fetching (loader) and form mutations (action) directly on route definitions, fetching data in parallel before rendering starts and eliminating 'waterfall' loading spinners."
+  },
+  {
+    "id": 73,
+    "subtopicId": 801,
+    "question": "What is the React Context API and when should it be used?",
+    "answer": "Context provides a way to pass data through the component tree without having to pass props down manually at every level.\n\nUse it for low-frequency, global values such as current theme (dark/light), authenticated user profile, or localized language settings."
+  },
+  {
+    "id": 74,
+    "subtopicId": 801,
+    "question": "How do you create and consume Context in React?",
+    "answer": "1. Create: const ThemeContext = createContext('light');\n2. Provide: <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>\n3. Consume: const theme = useContext(ThemeContext);"
+  },
+  {
+    "id": 75,
+    "subtopicId": 801,
+    "question": "What is the primary performance drawback of Context and how do you fix it?",
+    "answer": "Whenever the Context value changes, ALL consuming components re-render, even if they only read a property that didn't change.\n\nFixes:\n• Split large contexts into smaller, targeted contexts (e.g. AuthContext and SettingsContext).\n• Memoize the context value with useMemo.\n• Use external state managers (Zustand) for high-frequency updates."
+  },
+  {
+    "id": 76,
+    "subtopicId": 801,
+    "question": "Context API vs Redux: When should you choose Redux over Context?",
+    "answer": "• Use Context for simple, low-frequency global values (theme, auth state).\n• Use Redux (or Zustand) for complex state with frequent updates, heavy business logic, time-travel debugging, middleware, or multi-step transaction flows."
+  },
+  {
+    "id": 77,
+    "subtopicId": 802,
+    "question": "What are the three core principles of Redux?",
+    "answer": "1. Single source of truth: Application state is stored in a single object tree within a central store.\n2. State is read-only: The only way to change state is to emit an action describing what happened.\n3. Changes are made with pure functions: Reducers are pure functions returning the next state."
+  },
+  {
+    "id": 78,
+    "subtopicId": 802,
+    "question": "What is Redux Toolkit and how does it improve classic Redux?",
+    "answer": "Redux Toolkit (RTK) is the official, opinionated toolset for modern Redux. It solves Redux's legacy problems by eliminating boilerplates, simplifying store setup (configureStore), and enabling mutating syntax via Immer (createSlice)."
+  },
+  {
+    "id": 79,
+    "subtopicId": 802,
+    "question": "What are createSlice, useSelector, and useDispatch?",
+    "answer": "• createSlice: Bundles action creators and reducers in a single file.\n• useSelector: Selects and subscribes to a specific slice of store state.\n• useDispatch: Dispatches actions to the Redux store to trigger state transitions."
+  },
+  {
+    "id": 80,
+    "subtopicId": 802,
+    "question": "How does RTK allow 'mutating' state syntax under the hood?",
+    "answer": "RTK uses the Immer library inside createSlice. Immer intercepts mutations (like state.items.push(newItem)) and automatically produces a safely immutably copied state tree behind the scenes."
+  },
+  {
+    "id": 81,
+    "subtopicId": 803,
+    "question": "What is Zustand and why is it preferred over Redux in many projects?",
+    "answer": "Zustand is a lightweight (~1KB), unopinionated state management library based on hooks.\n\nWhy preferred:\n• Zero boilerplate: No actions, reducers, or provider wrappers needed.\n• Components subscribe only to selected state, eliminating unnecessary re-renders.\n• Works seamlessly outside React components (in helper functions and services)."
+  },
+  {
+    "id": 82,
+    "subtopicId": 803,
+    "question": "How do you create a store and use selectors in Zustand?",
+    "answer": "const useCart = create((set) => ({\n    items: [],\n    addItem: (item) => set((state) => ({ items: [...state.items, item] })),\n    clear: () => set({ items: [] })\n}));\n\n// In component:\nconst items = useCart((state) => state.items);"
+  },
+  {
+    "id": 83,
+    "subtopicId": 803,
+    "question": "What is the difference between Server State and Client State?",
+    "answer": "• Client State: Ephemeral UI state owned by the browser (modal open/closed, current tab, form inputs).\n• Server State: Asynchronous remote database data (user list, orders) that requires caching, deduplication, and invalidation, handled best by TanStack Query."
+  },
+  {
+    "id": 84,
+    "subtopicId": 803,
+    "question": "How do you persist state in localStorage with Zustand?",
+    "answer": "Use Zustand's built-in persist middleware:\n\nconst useStore = create(\n    persist(\n        (set) => ({ count: 0 }),\n        { name: 'app-storage' }\n    )\n);"
+  },
+  {
+    "id": 85,
+    "subtopicId": 901,
+    "question": "Fetch API vs Axios: What are the key differences?",
+    "answer": "• Axios: Automatically transforms JSON responses, throws on HTTP 4xx/5xx errors, supports request cancellation, and provides interceptors.\n\n• Fetch: Native browser API, requires manual res.json() step, does NOT reject on 404 or 500 status codes (requires checking res.ok), and lacks built-in interceptors."
+  },
+  {
+    "id": 86,
+    "subtopicId": 901,
+    "question": "Where should API calls be placed in a React component and why?",
+    "answer": "Place API calls inside a useEffect hook (or custom hook/TanStack Query) with proper dependency arrays.\n\nNever call APIs directly inside the component body, as that runs on every single render and triggers infinite network loops."
+  },
+  {
+    "id": 87,
+    "subtopicId": 901,
+    "question": "What are Axios Interceptors and what are their primary use cases?",
+    "answer": "Interceptors intercept requests or responses before they reach .then() or .catch():\n• Request Interceptors: Automatically attach 'Authorization: Bearer <token>' headers.\n• Response Interceptors: Catch 401 Unauthorized responses to silently refresh tokens and retry failed requests."
+  },
+  {
+    "id": 88,
+    "subtopicId": 901,
+    "question": "How do you cancel pending HTTP requests using AbortController?",
+    "answer": "useEffect(() => {\n    const controller = new AbortController();\n    axios.get('/api/data', { signal: controller.signal })\n        .then(res => setData(res.data))\n        .catch(err => { if (!axios.isCancel(err)) handleError(err); });\n    return () => controller.abort(); // Cancels on unmount\n}, []);"
+  },
+  {
+    "id": 89,
+    "subtopicId": 902,
+    "question": "What is TanStack Query (React Query) and what problems does it solve?",
+    "answer": "TanStack Query is a dedicated server state management library. It eliminates manual useEffect fetching, useState loading/error flags, provides automatic caching, background refetching, deduplication, and garbage collection."
+  },
+  {
+    "id": 90,
+    "subtopicId": 902,
+    "question": "What is the difference between staleTime and cacheTime (gcTime)?",
+    "answer": "• staleTime: The duration before fetched data is considered stale. While fresh, no background refetches occur.\n• gcTime (cacheTime): How long inactive/unused query data remains cached in memory before being garbage collected."
+  },
+  {
+    "id": 91,
+    "subtopicId": 902,
+    "question": "What are Optimistic Updates and how are they implemented?",
+    "answer": "Optimistic updates immediately update the UI with expected results before the server confirms the request, making interactions feel instant.\n\nIf the server request fails, TanStack Query automatically rolls back the UI state to the previous snapshot."
+  },
+  {
+    "id": 92,
+    "subtopicId": 902,
+    "question": "How do you handle pagination and infinite scrolling with APIs?",
+    "answer": "• Offset Pagination: Pass page and limit query parameters (/items?page=1&limit=20).\n• Cursor Pagination: Pass pointer IDs to prevent duplicated items when records are inserted.\n• Infinite Scroll: Combine TanStack Query's useInfiniteQuery with an IntersectionObserver trigger."
+  },
+  {
+    "id": 93,
+    "subtopicId": 1001,
+    "question": "What causes a React component to re-render?",
+    "answer": "A component re-renders when:\n1. Its state changes.\n2. Its parent component re-renders.\n3. Context values it consumes change.\n4. Its props change."
+  },
+  {
+    "id": 94,
+    "subtopicId": 1001,
+    "question": "How does React.memo work and when should you use custom comparison functions?",
+    "answer": "React.memo is a higher-order component that wraps functional components to prevent re-rendering if props have not shallowly changed.\n\nPass a custom comparison function (prevProps, nextProps) => boolean when props contain complex nested objects or arrays where shallow equality is insufficient."
+  },
+  {
+    "id": 95,
+    "subtopicId": 1001,
+    "question": "How do you use the React DevTools Profiler to detect rendering bottlenecks?",
+    "answer": "Open the Profiler tab, click Record, perform actions, and stop recording. The flamechart shows render durations, commit phases, and explains exactly why each component rendered (e.g. 'Hook 2 changed' or 'Props changed')."
+  },
+  {
+    "id": 96,
+    "subtopicId": 1001,
+    "question": "What is List Virtualization (Windowing) and why is it critical?",
+    "answer": "Virtualization (e.g. react-window, react-virtualized) only renders the DOM nodes currently visible in the viewport (e.g. 10 items instead of 10,000 items).\n\nAs the user scrolls, off-screen nodes are recycled, preventing memory overload and keeping scrolling buttery smooth at 60 FPS."
+  },
+  {
+    "id": 97,
+    "subtopicId": 1002,
+    "question": "What is Code Splitting and how does dynamic import() work?",
+    "answer": "Code splitting breaks a large single JavaScript bundle into smaller chunks that load on demand.\n\nDynamic import('./Modal') returns a Promise resolving to the module, enabling the browser to fetch code chunks asynchronously only when triggered."
+  },
+  {
+    "id": 98,
+    "subtopicId": 1002,
+    "question": "How do you lazy-load heavy components with React.lazy and Suspense?",
+    "answer": "const Chart = React.lazy(() => import('./HeavyChart'));\n\n<Suspense fallback={<SkeletonLoader />}>\n    <Chart data={data} />\n</Suspense>\n\nThe Chart bundle is only downloaded when rendered, keeping initial page load fast."
+  },
+  {
+    "id": 99,
+    "subtopicId": 1002,
+    "question": "What is Tree Shaking and how do you write imports to support it?",
+    "answer": "Tree shaking eliminates unused code from the final bundle during build.\n\nTo support it, use named ES module imports: import { debounce } from 'lodash-es' instead of import _ from 'lodash' (which bundles the entire library)."
+  },
+  {
+    "id": 100,
+    "subtopicId": 1002,
+    "question": "What are Core Web Vitals and how do you optimize them in React?",
+    "answer": "• LCP (Largest Contentful Paint): Optimize hero images and reduce blocking JavaScript.\n• INP (Interaction to Next Paint): Yield to the main thread with useTransition, debouncing, and lightweight event handlers.\n• CLS (Cumulative Layout Shift): Always set explicit width/height dimensions on images and reserve space for dynamic banners."
+  },
+  {
+    "id": 101,
+    "subtopicId": 1101,
+    "question": "What is a Higher-Order Component (HOC) and how does it work?",
+    "answer": "An HOC is a pure function that takes a component as an argument and returns an enhanced component:\n\nconst withAuth = (WrappedComponent) => {\n    return (props) => {\n        const { user } = useAuth();\n        return user ? <WrappedComponent {...props} /> : <Redirect />;\n    };\n};\n\nUsed for cross-cutting concerns like logging, permissions, and theme injection."
+  },
+  {
+    "id": 102,
+    "subtopicId": 1101,
+    "question": "What is the Render Props pattern and how does it compare to Custom Hooks?",
+    "answer": "Render props is a technique where a component receives a function that returns React elements (<DataProvider render={data => <h1>{data}</h1>} />).\n\nCustom Hooks have largely superseded render props because hooks avoid 'wrapper hell' and make code cleaner and more readable."
+  },
+  {
+    "id": 103,
+    "subtopicId": 1101,
+    "question": "What are Compound Components and how do they communicate state?",
+    "answer": "Compound components are a set of components that work together to form a complete UI unit (e.g. <Select><Select.Option /></Select> or <Accordion><Accordion.Item /></Accordion>).\n\nThey communicate shared state implicitly via React Context rather than explicit prop passing on each child."
+  },
+  {
+    "id": 104,
+    "subtopicId": 1101,
+    "question": "What are Controlled vs Uncontrolled Props patterns in component design?",
+    "answer": "A component supports both internal state (uncontrolled with defaultValue) and external state control (controlled with value and onChange), providing maximum flexibility for library consumers."
+  },
+  {
+    "id": 105,
+    "subtopicId": 1102,
+    "question": "What are React Portals (ReactDOM.createPortal) and when are they used?",
+    "answer": "Portals render child elements into a different DOM node outside the parent component's DOM hierarchy:\n\nReactDOM.createPortal(child, document.getElementById('modal-root'))\n\nEssential for Modals, Tooltips, and Dropdowns to prevent CSS z-index and overflow: hidden clipping issues."
+  },
+  {
+    "id": 106,
+    "subtopicId": 1102,
+    "question": "What is an Error Boundary and why must it be a Class Component?",
+    "answer": "Error Boundaries catch JavaScript errors anywhere in their child component tree, log them, and render a fallback UI instead of crashing the whole app.\n\nThey must be Class Components because they implement lifecycle methods: static getDerivedStateFromError() and componentDidCatch()."
+  },
+  {
+    "id": 107,
+    "subtopicId": 1102,
+    "question": "What is Concurrent React and how does useTransition work?",
+    "answer": "Concurrent React allows rendering tasks to be interrupted, paused, and resumed.\n\nuseTransition marks a state update as a non-urgent transition:\nconst [isPending, startTransition] = useTransition();\nstartTransition(() => setFilter(searchQuery));\n\nKeeps UI inputs responsive even while rendering heavy list updates."
+  },
+  {
+    "id": 108,
+    "subtopicId": 1102,
+    "question": "What are React Server Components (RSC) and how do they differ from SSR?",
+    "answer": "RSC execute only on the server and never ship their JavaScript code to the client bundle, reducing bundle size to 0KB for server-only logic.\n\nSSR renders HTML on the server, but still sends the full JavaScript bundle to hydrate in the browser."
+  },
+  {
+    "id": 109,
+    "subtopicId": 1201,
+    "question": "What is the core philosophy of React Testing Library (RTL)?",
+    "answer": "'The more your tests resemble the way your software is used, the more confidence they can give you.'\n\nRTL tests user interactions and accessible DOM output rather than internal implementation details like component state or private methods."
+  },
+  {
+    "id": 110,
+    "subtopicId": 1201,
+    "question": "What is the difference between getBy, queryBy, and findBy queries?",
+    "answer": "• getBy: Returns the element or throws an error if not found. Use for elements that must exist immediately.\n• queryBy: Returns the element or null if not found. Use for asserting non-existence (expect(queryByText('Error')).toBeNull()).\n• findBy: Returns a Promise that resolves when the element appears. Use for async content."
+  },
+  {
+    "id": 111,
+    "subtopicId": 1201,
+    "question": "Why is userEvent preferred over fireEvent in tests?",
+    "answer": "fireEvent dispatches raw DOM events synchronously.\n\n@testing-library/user-event simulates realistic full browser interactions (e.g. typing clicks focus, triggers keydown, keypress, input, and keyup), making tests more accurate."
+  },
+  {
+    "id": 112,
+    "subtopicId": 1201,
+    "question": "What is Snapshot Testing and what are its pros and cons?",
+    "answer": "Snapshot tests compare rendered component output against a saved reference snapshot file.\n\n• Pros: Quickly catches unintended markup regressions.\n• Cons: Easily produces brittle tests that developers blindly update with 'jest -u' without verifying."
+  },
+  {
+    "id": 113,
+    "subtopicId": 1202,
+    "question": "How do you mock API requests in tests using Mock Service Worker (MSW)?",
+    "answer": "MSW intercepts network requests at the network level using Service Workers in browsers or node-request-interceptor in Node.js.\n\nIt tests real fetch/Axios code without modifying source files, unlike manual jest.mock() stubs."
+  },
+  {
+    "id": 114,
+    "subtopicId": 1202,
+    "question": "How do you test custom React hooks using renderHook and act()?",
+    "answer": "Use renderHook from @testing-library/react:\n\nconst { result } = renderHook(() => useCounter());\nact(() => {\n    result.current.increment();\n});\nexpect(result.current.count).toBe(1);\n\nact() ensures state updates and effects are flushed before assertions run."
+  },
+  {
+    "id": 115,
+    "subtopicId": 1202,
+    "question": "What is code coverage and what metrics matter in testing?",
+    "answer": "Coverage measures code exercised during tests: Line, Statement, Branch (if/else), and Function coverage. Prioritize branch coverage for critical paths (auth, payment) rather than chasing 100% vanity coverage."
+  },
+  {
+    "id": 116,
+    "subtopicId": 1202,
+    "question": "What is the difference between Unit, Integration, and E2E testing?",
+    "answer": "• Unit Tests: Test single components or functions in isolation.\n• Integration Tests: Test how multiple components cooperate (e.g. form submission updating a list).\n• E2E (Playwright/Cypress): Test the entire running application in a real browser against a live or staged backend."
+  },
+  {
+    "id": 117,
+    "subtopicId": 1301,
+    "question": "How should JWT tokens be stored securely in React?",
+    "answer": "Best Practice: Store tokens in HttpOnly, Secure, SameSite cookies set by the backend. JavaScript cannot access HttpOnly cookies, completely eliminating token theft via Cross-Site Scripting (XSS).\n\nAvoid storing sensitive tokens in localStorage."
+  },
+  {
+    "id": 118,
+    "subtopicId": 1301,
+    "question": "What is CORS and how do you resolve CORS errors in development and production?",
+    "answer": "CORS is a browser security policy blocking cross-origin requests.\n• In Dev: Set a proxy in package.json ('proxy': 'http://localhost:5000') or Vite dev server config.\n• In Production: Configure backend response headers (Access-Control-Allow-Origin, Access-Control-Allow-Methods)."
+  },
+  {
+    "id": 119,
+    "subtopicId": 1301,
+    "question": "How do you protect React applications against XSS attacks?",
+    "answer": "• React automatically escapes content rendered inside JSX ({userInput}).\n• Avoid dangerouslySetInnerHTML. If required, sanitize HTML using DOMPurify.\n• Validate and sanitize user inputs on both client and server."
+  },
+  {
+    "id": 120,
+    "subtopicId": 1301,
+    "question": "What is CSRF and how do SameSite cookies prevent it?",
+    "answer": "Cross-Site Request Forgery tricks an authenticated user's browser into submitting unauthorized requests.\n\nSetting SameSite=Strict or SameSite=Lax on authentication cookies ensures browsers never include cookies on cross-site requests."
+  },
+  {
+    "id": 121,
+    "subtopicId": 1302,
+    "question": "How do you integrate WebSockets in React without memory leaks?",
+    "answer": "Establish connection inside useEffect and clean up on unmount:\n\nuseEffect(() => {\n    const socket = new WebSocket('wss://api.example.com');\n    socket.onmessage = (e) => setMessages(prev => [...prev, e.data]);\n    return () => socket.close(); // Clean up\n}, []);"
+  },
+  {
+    "id": 122,
+    "subtopicId": 1302,
+    "question": "What are Server-Sent Events (SSE) and when are they better than WebSockets?",
+    "answer": "SSE provides a one-way persistent HTTP connection where the server pushes updates via EventSource.\n\nSSE is simpler than WebSockets, supports automatic reconnection, operates over HTTP/2, and is ideal for unidirectional feeds (notifications, LLM streaming)."
+  },
+  {
+    "id": 123,
+    "subtopicId": 1302,
+    "question": "How do you handle file uploads using FormData in React?",
+    "answer": "const formData = new FormData();\nformData.append('file', selectedFile);\nawait axios.post('/api/upload', formData, {\n    headers: { 'Content-Type': 'multipart/form-data' },\n    onUploadProgress: (p) => setProgress(Math.round((p.loaded * 100) / p.total))\n});"
+  },
+  {
+    "id": 124,
+    "subtopicId": 1302,
+    "question": "REST vs GraphQL: How does GraphQL solve over-fetching and under-fetching?",
+    "answer": "REST has fixed endpoints returning predefined data structures.\n\nGraphQL has a single endpoint where the client query specifies exact fields needed, preventing over-fetching (wasted bandwidth) and under-fetching (multiple network waterfalls)."
+  },
+  {
+    "id": 125,
+    "subtopicId": 1303,
+    "question": "What is Server-Side Rendering (SSR) and what are its benefits?",
+    "answer": "SSR renders React components to complete HTML on the server per request.\n\nBenefits: Instant First Contentful Paint (FCP), superior SEO for web crawlers, and faster load times on low-powered mobile devices."
+  },
+  {
+    "id": 126,
+    "subtopicId": 1303,
+    "question": "What is Static Site Generation (SSG) vs Incremental Static Regeneration (ISR)?",
+    "answer": "• SSG: Pre-renders pages at build time into static HTML/CSS files.\n• ISR: Updates static pages in the background after deployment without rebuilding the entire website, combining SSG speed with dynamic freshness."
+  },
+  {
+    "id": 127,
+    "subtopicId": 1303,
+    "question": "What is Next.js App Router and how do Server Actions work?",
+    "answer": "Next.js App Router uses React Server Components by default.\n\nServer Actions allow defining asynchronous server-side functions that can be invoked directly from client forms without creating dedicated REST API route handlers."
+  },
+  {
+    "id": 128,
+    "subtopicId": 1303,
+    "question": "What is the difference between Client Components and Server Components?",
+    "answer": "• Server Components: Default in Next.js. Render only on the server, have zero client bundle size, and access databases directly.\n• Client Components: Marked with 'use client'. Hydrated in the browser to handle state (useState), effects (useEffect), and event listeners."
+  },
+  {
+    "id": 129,
+    "subtopicId": 1401,
+    "question": "What happens under the hood during npm run build?",
+    "answer": "• Transpilation: Converts modern JSX and TypeScript into browser-compatible JavaScript.\n• Tree Shaking: Strips dead, unused code from imported libraries.\n• Minification: Removes whitespace and shrinks variable names.\n• Content Hashing: Adds unique hashes to filenames (e.g. main.8f3b2a.js) for cache busting.\n• Static Output: Emits optimized static assets into a dist/ folder."
+  },
+  {
+    "id": 130,
+    "subtopicId": 1401,
+    "question": "What causes the '404 on page refresh' error in React SPAs and how do you fix it?",
+    "answer": "In an SPA, routing is handled by client-side JavaScript. When a user refreshes /dashboard, the static host looks for a physical /dashboard/index.html file on disk, which doesn't exist.\n\nFix: Configure server rewrite rules pointing all unmatched routes back to index.html:\n• Netlify: Add '/* /index.html 200' in a _redirects file.\n• Vercel: Add rewrite rule in vercel.json.\n• Nginx: try_files $uri $uri/ /index.html;"
+  },
+  {
+    "id": 131,
+    "subtopicId": 1401,
+    "question": "How does Cache Busting work with content-hashed assets?",
+    "answer": "Bundlers generate unique file hashes based on file content (bundle.4f92bc.js).\n• Hashed Assets: Cache indefinitely (Cache-Control: max-age=31536000, immutable).\n• index.html: Never cache (Cache-Control: no-cache). Browsers always fetch the latest index.html, which links to newly hashed asset filenames on each deployment."
+  },
+  {
+    "id": 132,
+    "subtopicId": 1401,
+    "question": "How do you deploy a React app to AWS using S3 and CloudFront?",
+    "answer": "1. S3: Create a bucket and upload the compiled dist/ directory.\n2. CloudFront: Create a distribution with the S3 bucket as origin. Configure custom error responses (404/403 mapped to /index.html with HTTP 200).\n3. Route 53: Attach custom domain and SSL certificate via ACM."
+  },
+  {
+    "id": 133,
+    "subtopicId": 1402,
+    "question": "How do you containerize a React app using Docker multi-stage builds?",
+    "answer": "• Stage 1 (Build): FROM node:20-alpine AS build. Run npm install and npm run build.\n• Stage 2 (Serve): FROM nginx:alpine. Copy compiled dist/ from build stage into /usr/share/nginx/html.\n\nResult: The final image excludes Node.js and source files, producing a lightweight (~25MB) production container."
+  },
+  {
+    "id": 134,
+    "subtopicId": 1402,
+    "question": "How do you configure a CI/CD pipeline using GitHub Actions?",
+    "answer": "Create .github/workflows/deploy.yml triggered on git push to main:\n1. Checkout code (actions/checkout).\n2. Install dependencies (npm ci).\n3. Run tests and linter (npm test, npm run lint).\n4. Run build (npm run build).\n5. Deploy static build output to hosting provider (Vercel, AWS S3, or Netlify)."
+  },
+  {
+    "id": 135,
+    "subtopicId": 1402,
+    "question": "What HTTP security headers should production React apps use?",
+    "answer": "• Content-Security-Policy (CSP): Restricts allowed script and style origins.\n• Strict-Transport-Security (HSTS): Forces HTTPS connections.\n• X-Frame-Options: DENY (prevents clickjacking attacks).\n• X-Content-Type-Options: nosniff (prevents MIME type sniffing).\n• Referrer-Policy: strict-origin-when-cross-origin."
+  },
+  {
+    "id": 136,
+    "subtopicId": 1402,
+    "question": "How do you monitor runtime errors and performance in production?",
+    "answer": "• Error Tracking (Sentry / Bugsnag): Captures uncaught runtime JavaScript exceptions with source-mapped stack traces, device metadata, and breadcrumbs.\n• Real User Monitoring (RUM): Track Core Web Vitals (LCP, INP, CLS) using the web-vitals library sent to Datadog or Google Analytics."
+  }
+]

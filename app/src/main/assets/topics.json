@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction",
+    "subtitle": "Virtual DOM, JSX & Architecture",
+    "tag": "Fundamentals"
+  },
+  {
+    "id": 2,
+    "title": "Building a Project",
+    "subtitle": "Architecture, Best Practices & Clean Code",
+    "tag": "Project"
+  },
+  {
+    "id": 3,
+    "title": "React Fundamentals",
+    "subtitle": "Components, Props, State & Events",
+    "tag": "Fundamentals"
+  },
+  {
+    "id": 4,
+    "title": "React Hooks",
+    "subtitle": "useState, useEffect, useMemo & Custom Hooks",
+    "tag": "Hooks"
+  },
+  {
+    "id": 5,
+    "title": "Handling Forms",
+    "subtitle": "Controlled vs Uncontrolled & Validation",
+    "tag": "Forms"
+  },
+  {
+    "id": 6,
+    "title": "Styling in React",
+    "subtitle": "CSS Modules, Styled Components & SASS",
+    "tag": "Styling"
+  },
+  {
+    "id": 7,
+    "title": "Routing with React Router",
+    "subtitle": "Routes, NavLink, Params & Protected Routes",
+    "tag": "Navigation"
+  },
+  {
+    "id": 8,
+    "title": "State Management",
+    "subtitle": "Context API, Redux Toolkit & Zustand",
+    "tag": "State"
+  },
+  {
+    "id": 9,
+    "title": "Working with APIs",
+    "subtitle": "Fetch, Axios, Async/Await & Caching",
+    "tag": "Networking"
+  },
+  {
+    "id": 10,
+    "title": "Performance Optimization",
+    "subtitle": "Memoization, Lazy Loading & Code Splitting",
+    "tag": "Performance"
+  },
+  {
+    "id": 11,
+    "title": "Advanced Topics",
+    "subtitle": "HOC, Portals, Profiler & Suspense",
+    "tag": "Advanced"
+  },
+  {
+    "id": 12,
+    "title": "Testing in React",
+    "subtitle": "Jest, React Testing Library & Unit Tests",
+    "tag": "Testing"
+  },
+  {
+    "id": 13,
+    "title": "React & Backend Integration",
+    "subtitle": "REST APIs, GraphQL, WebSockets & SSR",
+    "tag": "Fullstack"
+  },
+  {
+    "id": 14,
+    "title": "Deployment",
+    "subtitle": "Vercel, Netlify, CI/CD & Production Build",
+    "tag": "DevOps"
+  }
+]

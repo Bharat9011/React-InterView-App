@@ -1,0 +1,206 @@
+[
+  {
+    "id": 101,
+    "topicId": 1,
+    "title": "Overview & Architecture",
+    "description": "What is React, SPA architecture, library vs framework"
+  },
+  {
+    "id": 102,
+    "topicId": 1,
+    "title": "Virtual DOM & Reconciliation",
+    "description": "Diffing algorithm, React Fiber, and batch state updates"
+  },
+  {
+    "id": 103,
+    "topicId": 1,
+    "title": "JSX (JavaScript XML)",
+    "description": "Syntax rules, compilation with Babel, and JSX vs HTML"
+  },
+  {
+    "id": 201,
+    "topicId": 2,
+    "title": "Architecture & Tooling",
+    "description": "Feature-based structure, Vite vs CRA, TypeScript & environment variables"
+  },
+  {
+    "id": 202,
+    "topicId": 2,
+    "title": "Code Quality & Standards",
+    "description": "ESLint, Prettier, Husky, SEO in SPAs & bundle analyzer"
+  },
+  {
+    "id": 301,
+    "topicId": 3,
+    "title": "Components & Composition",
+    "description": "Functional vs Class components, Pure components & Fragments"
+  },
+  {
+    "id": 302,
+    "topicId": 3,
+    "title": "Props & State",
+    "description": "Immutability, one-way data binding & props drilling"
+  },
+  {
+    "id": 303,
+    "topicId": 3,
+    "title": "Events & Lists",
+    "description": "SyntheticEvent, conditional rendering & list keys"
+  },
+  {
+    "id": 401,
+    "topicId": 4,
+    "title": "State & Lifecycle Hooks",
+    "description": "useState, useEffect, dependency array & rules of hooks"
+  },
+  {
+    "id": 402,
+    "topicId": 4,
+    "title": "Performance Hooks",
+    "description": "useMemo, useCallback & referential equality"
+  },
+  {
+    "id": 403,
+    "topicId": 4,
+    "title": "Ref & Reducer Hooks",
+    "description": "useRef, useReducer & creating Custom Hooks"
+  },
+  {
+    "id": 501,
+    "topicId": 5,
+    "title": "Controlled vs Uncontrolled Inputs",
+    "description": "State-bound inputs, refs, file uploads & single source of truth"
+  },
+  {
+    "id": 502,
+    "topicId": 5,
+    "title": "Form Validation & Libraries",
+    "description": "React Hook Form, Formik, Zod schemas & async validation"
+  },
+  {
+    "id": 601,
+    "topicId": 6,
+    "title": "CSS Modules & Inline Styles",
+    "description": "Scoped styling, inline styles, clsx & SASS integration"
+  },
+  {
+    "id": 602,
+    "topicId": 6,
+    "title": "Tailwind CSS & Styled Components",
+    "description": "Utility-first CSS, CSS-in-JS, theme switching & CSS variables"
+  },
+  {
+    "id": 701,
+    "topicId": 7,
+    "title": "Core Routing & Navigation",
+    "description": "BrowserRouter, Routes, Link, NavLink & 404 handling"
+  },
+  {
+    "id": 702,
+    "topicId": 7,
+    "title": "Dynamic & Nested Routing",
+    "description": "useParams, useSearchParams, useNavigate & Outlet"
+  },
+  {
+    "id": 703,
+    "topicId": 7,
+    "title": "Protected Routes & Guards",
+    "description": "Auth guards, login redirects & lazy loading routes"
+  },
+  {
+    "id": 801,
+    "topicId": 8,
+    "title": "React Context API",
+    "description": "createContext, useContext, Provider pattern & performance caveats"
+  },
+  {
+    "id": 802,
+    "topicId": 8,
+    "title": "Redux Toolkit (RTK)",
+    "description": "Store, slices, dispatch, selectors & Immer immutability"
+  },
+  {
+    "id": 803,
+    "topicId": 8,
+    "title": "Zustand & Modern State",
+    "description": "Lightweight stores, selectors, persist middleware & comparison"
+  },
+  {
+    "id": 901,
+    "topicId": 9,
+    "title": "HTTP Requests & Axios",
+    "description": "Fetch vs Axios, interceptors, AbortController & error handling"
+  },
+  {
+    "id": 902,
+    "topicId": 9,
+    "title": "Server State & Caching",
+    "description": "TanStack Query, caching, optimistic updates & pagination"
+  },
+  {
+    "id": 1001,
+    "topicId": 10,
+    "title": "Render Optimization",
+    "description": "React.memo, DevTools Profiler, avoiding re-renders & windowing"
+  },
+  {
+    "id": 1002,
+    "topicId": 10,
+    "title": "Code Splitting & Bundling",
+    "description": "React.lazy, Suspense, tree shaking & Core Web Vitals"
+  },
+  {
+    "id": 1101,
+    "topicId": 11,
+    "title": "Advanced Design Patterns",
+    "description": "HOC, Render Props, Compound Components & Custom Hooks"
+  },
+  {
+    "id": 1102,
+    "topicId": 11,
+    "title": "Portals, Error Boundaries & Concurrency",
+    "description": "ReactDOM.createPortal, ErrorBoundary & Concurrent React"
+  },
+  {
+    "id": 1201,
+    "topicId": 12,
+    "title": "Jest & React Testing Library",
+    "description": "RTL philosophy, query priorities (getBy, queryBy, findBy) & userEvent"
+  },
+  {
+    "id": 1202,
+    "topicId": 12,
+    "title": "Mocking & Hook Testing",
+    "description": "Mock Service Worker (MSW), renderHook & test coverage"
+  },
+  {
+    "id": 1301,
+    "topicId": 13,
+    "title": "Auth & Security",
+    "description": "JWT HttpOnly cookies, CORS headers, XSS & CSRF protection"
+  },
+  {
+    "id": 1302,
+    "topicId": 13,
+    "title": "WebSockets & Real-time Feeds",
+    "description": "WebSocket lifecycle, Server-Sent Events & file uploads"
+  },
+  {
+    "id": 1303,
+    "topicId": 13,
+    "title": "Next.js & Fullstack SSR",
+    "description": "SSR, SSG, ISR, App Router & Server Actions"
+  },
+  {
+    "id": 1401,
+    "topicId": 14,
+    "title": "Static Hosting & CDNs",
+    "description": "Production build, Vercel/Netlify, 404 rewrite & cache busting"
+  },
+  {
+    "id": 1402,
+    "topicId": 14,
+    "title": "DevOps, Containers & Monitoring",
+    "description": "Docker multi-stage builds, GitHub Actions, security headers & Sentry"
+  }
+]
